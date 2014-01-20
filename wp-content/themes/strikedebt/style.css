@@ -1,0 +1,1189 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 16px Helmet, Freesans, sans-serif;}
+
+/* using local fonts? make sure to read up on Paul Irish's 
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #222222;}
+
+a {color: #892828; text-decoration: none; border-bottom: 2px solid; border-color: #9f2323; border-color: rgba(0,0,0,0.1);
+  
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+
+ }
+a:hover {border-color: #9f2323; border-color: rgba(159,35,35,0.7); background-color: rgba(255,255,255,0.5);}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+/*
+.asphaltblack {
+  font-family: "Asphalt Black";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.asphaltcondensedblack {
+  font-family: "Asphalt Cond Black";
+  font-style: normal;
+  font-weight: normal;
+}
+*/
+
+
+
+body {
+  background-color: #fcf7f3;
+  font-family: "rooney-web",sans-serif;
+  color: #333;
+  line-height: 1.5em;
+}
+
+body.home {
+  background: url(_/bg_sm.jpg) #fcf7f3 no-repeat fixed center top;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 a {
+  border: 0;
+}
+
+p {
+  margin: 1.25em 0;
+}
+
+a.image {
+  border: 0;
+}
+
+nav {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background-color: #66605d;
+  background-color: rgba(81,76,74,0.85);
+  font-family: "camingodos-web", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav li a {
+  display: block;
+  border-top: solid 0.2em #7c5644;
+  border-bottom: 0;
+  float: left;
+  color: #fff;
+  margin-top: -0.15em;
+  margin-right: 0.33em;
+  padding: 0.5em 2%;
+}
+
+nav li a:hover, nav li a.active {
+  border-color: #892828;
+  background-color: rgba(193,56,56,0.85);
+}
+
+#about {
+  padding: 4.5em 4%;
+  max-width: 39em;
+  margin: 0 auto;
+}
+
+#principles {
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.75em;
+  color: #383e30;
+  color: rgba(56,62,48,0.8);
+  background: url(_/principles_bg.jpg) #f5f3d3 no-repeat center;
+}
+
+#principles a.button {
+    float: none;
+}
+
+#more aside, #get-involved figure, .single aside.left {
+  background-color: #fff;
+  background-color: rgba(250,250,253,0.8);
+  border-top: solid 0.28em #944c4c;
+  border-color: rgba(130,48,48,0.65);
+  padding: 1em;
+}
+
+.initiatives {
+  clear: both;
+}
+
+.initiatives#big {
+  background-color: #d7dee4;
+}
+
+.initiatives article div {
+  padding: 0 4%;
+}
+
+.initiatives article {
+  padding: 1em 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#big article {
+  padding-top: 10em;
+}
+
+.initiatives #rollingjub {
+  color: #382519;
+  color: rgba(56,37,25,0.8);
+  background: url(_/rj_bg_sm.jpg) #d7dee4 no-repeat center top;
+}
+
+.initiatives #rollingjub:hover {
+  color: rgba(56,37,25,1);
+}
+
+.initiatives #rollingjub h4 {
+  color: #1b4f79;
+}
+
+.initiatives #drom {
+  color: #383e30;
+  color: rgba(56,62,48,0.8);
+  background: url(_/drom3_bg_sm.jpg) #e1e1c4 no-repeat center top;
+}
+
+.initiatives #drom:hover {
+  color: rgba(56,62,48,1);
+}
+
+.initiatives #drom h4 {
+  color: #817e58;
+}
+
+.initiatives article:last-child {
+  margin-right: 0;
+}
+
+.initiatives#kit {
+  background: url(_/kit_bg_sm.jpg) #4d4946 no-repeat center top;
+  padding-top: 6em;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.initiatives#kit p {
+  color: #dddddd;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.initiatives#kit:hover p {
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 4%;
+  max-width: 60em;
+}
+
+h2 {
+  font-family: "camingodos-web", sans-serif;
+  font-size: 1.15em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #66605d;
+  text-shadow: 0 1px 0 #fff;
+  letter-spacing: 0.05em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-family: "camingodos-web", sans-serif;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 700;
+  font-size: 1.75em;
+  margin: 0.75em 0;
+  line-height: 1.1em;
+  color: #66605d;
+}
+
+h3 a {
+  color: #66605d;
+  border: 0;
+}
+
+h3 a:hover {
+  color: #892828;
+}
+
+p.special, h4 {
+  font-weight: 300;
+}
+
+p.special {
+  font-size: 1.65em;
+  line-height: 1.4em;
+  color: #823030; /*red*/
+}
+
+p.by {
+  color: #66605d; /*grey*/
+  margin-top: -1em;
+  font-family: "camingodos-web", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+p.updated {
+    padding-top: 1em;
+    border-top: solid 1px rgba(0,0,0,0.1);
+    margin-top: 2em;
+}
+
+blockquote {
+    margin-left: 2em;
+    padding: 1em;
+    background-color: #fff;
+    background-color: rgba(250,250,253,0.8);
+    border-left: solid 0.25em #944c4c;
+    border-color: rgba(130,48,48,0.5);
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+h4, .post h1 {
+  font-size: 2.25em;
+  line-height: 1em;
+  font-family: "rooney-web",sans-serif;
+}
+
+section#more {
+  margin: 1.5em auto;
+}
+
+button, a.button, input[type="submit"], .more-link, dt {
+  background-color: #fff;
+  color: #66605d;
+  background-color: rgba(255,255,255,0.7);
+  border: 0;
+  font-family: "camingodos-web", sans-serif;
+  font-size: 99%;
+  display: inline-block;
+  padding: 0.5em 2.5%;
+  float: left;
+  margin-bottom: 0.5em;
+  border-bottom: solid 0.15em rgba(0,0,0,0.15);
+  
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.more-link {
+  margin-top: 1em;
+  padding: 0.5em 0;
+}
+
+button:hover, a.button:hover, input[type="submit"]:hover, .more-link:hover, dt:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+button.dark, a.button.dark, #get-involved dt {
+  background-color: #999;
+  background-color: rgba(173,170,171,0.5);
+  color: #eee;
+}
+
+button.dark:hover, a.button.dark, #get-involved dt:hover {
+  background-color: #999;
+  background-color: rgba(173,170,171,0.7);
+  color: #fff;
+}
+
+.more-link:hover {
+  border-color: rgba(0,0,0,0.1);
+}
+
+#title {
+  top: -1.75em;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+#title:hover {
+  -webkit-transform: rotate(-2.5deg);
+  -moz-transform: rotate(-2.5deg);
+  -ms-transform: rotate(-2.5deg);
+  -o-transform: rotate(-2.5deg);
+}
+
+#donate button.donate:hover {
+  background-color: #b33752;
+  background-color: rgba(179,55,82,1);/* Safari */
+}
+
+section#more a {
+  border: 0;
+  background: none;
+}
+
+section#more a button {
+  float: none;
+  margin-right: 0.5em;
+}
+
+article button, article .more-link {
+  width: 100%;
+  text-align: center;
+}
+
+figure input[type=submit] {
+  font-size: 1.15em;
+}
+
+section aside:last-child {
+  margin-right: 0;
+}
+
+input[type=text], textarea {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #66605d;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+  font-family: "camingodos-web", sans-serif;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 0.25em;
+  margin: 0.3em 0.1em 0.25em 0;
+  border: 0.1em solid #ddd;
+  border-color: rgba(0,0,0,0.1);
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 0.3em rgba(252, 215, 0, 0.65);
+  padding: 0.25em 0px 0.25em 0.25em;
+  margin: 0.3em 0.1em 0.25em 0px;
+  border: 0.1em solid rgba(252, 215, 0, 0.65);
+}
+
+input[type="text"].wepay-widget-input.donation-input-pay {
+  font-size: 1.5em !important;
+  color: #66605d !important;
+  height: auto !important;
+  width: 5.5em !important;
+  font-family: "camingodos-web", sans-serif !important;
+  padding: 0.25em !important;
+  margin: 0.3em 0.75em 0.25em 0 !important;
+  border: 0.1em solid #ddd !important;
+  border-color: rgba(0,0,0,0.1) !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+input[type="text"]:focus.wepay-widget-input.donation-input-pay {
+  box-shadow: 0 0 0.3em rgba(252, 215, 0, 0.65) !important;
+  border: 0.1em solid rgba(252, 215, 0, 0.65) !important;
+}
+
+input[type="text"].wepay-widget-input.donation-input-pay, a.wepay-widget-button.wepay-green {
+  float: left;
+/*  background-color: #fff !important;
+  background-color: rgba(255,255,255,0.7) !important;*/
+}
+
+a.wepay-widget-button.wepay-green {
+  margin: 0.3em 0 0.5em;
+  display: block;
+}
+
+input[type=text]::-webkit-input-placeholder {
+  font-weight: 700;
+  color: #aaaaaa;
+}
+
+input[type=text]:-moz-placeholder {  
+  font-weight: 700;
+  color: #aaaaaa;
+}
+
+#get-involved {
+  background: url(_/get-involved_bg.jpg) #454c53 no-repeat fixed center top;
+  padding: 2em 0;
+  color: #dededf;
+}
+
+#get-involved label {
+  display: none;
+}
+
+#get-involved h2, #get-involved h3, #get-involved h3 a {
+  text-shadow: none;
+  color: #fcf7f3;
+}
+
+#get-involved h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+    
+#get-involved h3#event {
+  color: #e0d9d2;
+  font-size: 1.33em;
+  margin-top: 0.75em;
+}
+
+#get-involved h2 {
+  font-family: "rooney-web",sans-serif;
+  font-size: 2.66em;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: -0.025em;
+  font-weight: 300;
+  margin-top: 0.5em;
+  color: #a4a7ac;
+  color: rgba(250,250,253,0.5);
+}
+
+#get-involved dt {
+  float: none;
+  display: block;
+  padding: 0.5em 0.75em;
+  font-size: 1.15em;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+#get-involved dt .time {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  display: block;
+}
+
+#get-involved dt .dot {
+  display: none;
+}
+
+#get-involved dd hr {
+  border-color: rgba(0,0,0, 0.15);
+  border-width: 0.15em;
+}
+
+#get-involved dt.open {
+  background-color: rgba(193,56,56, 0.75);
+}
+
+#get-involved dd {
+  background-color: rgba(193,56,56, 0.3);
+  padding: 0.75em;
+  margin-bottom: 1.5em;
+}
+
+#get-involved dd p {
+  background: url(_/icon_events.png) no-repeat 0 5px;
+  padding-left: 1.5em;
+}
+
+#get-involved dd .loc {
+  background-position: 0 -40px;
+}
+
+#get-involved dd .gcal {
+  background-position: 0 -81px;
+}
+
+#get-involved dd .desc {
+  background: none;
+  padding: 0;
+}
+
+#get-involved a {
+  color: #fffbcc;
+  border-color: rgba(255,251,204, 0.1);
+}
+
+#get-involved a:hover {
+  border-color: rgba(255,251,204, 1);
+  background-color: rgba(0,0,0, 0.1);
+}
+
+#get-involved figure {
+  background-color: #fff;
+  background-color: rgba(250,250,253,0.33);
+  border-top: solid 0.28em #313a45;
+  margin-bottom: 1.5em;
+}
+
+#get-involved .gce-list-title {
+  display: none;
+}
+
+#initiatives {
+  position: absolute;
+}
+
+.home #blog {
+  padding: 0.75em 0;
+  background: rgba(210,210,212, 0.5);
+}
+
+.home #li_about {
+  display: none;
+}
+
+footer#main {
+  text-align: center;
+  clear: both;
+}
+
+
+
+/************************************
+
+    PAGES */
+      
+    
+.page-id-527 {
+    background: #f5f3d3;
+}
+
+
+
+/* And here begins the Wordpress fun.
+-------------------------------------------------------------------------------*/
+
+#page-wrap {width: 960px; margin: 20px auto;}
+
+.post h1 {
+  text-align: left;
+  font-family: "calluna", serif;
+  font-size: 2.75em;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+  color: #424b55;
+}
+
+.post h2 {
+  font-family: "rooney-web",sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 1.25em;
+  font-size: 1.66em;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: #823030; /*red*/
+}
+
+.post h3 {
+  font-size: 1.25em;
+  margin-top: 1.25em;
+  color: black;
+}
+
+.home .post h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.post ul {
+  list-style: square;
+}
+
+.post li {
+  margin: 0.5em 0;
+}
+
+.post time:first-child {
+  font-family: "camingodos-web", sans-serif;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1em;
+  color: #66605d;
+  margin-bottom: 2em;
+}
+
+.post .case-study, .post .box {
+  background: white;
+  padding: 1em;
+  margin: 0 -1em;
+  border: solid 1px #dddddd;
+}
+
+.home .post img {
+  max-width: 50%;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.case-study h3, .box h3 {
+  margin-top: 0;
+}
+
+.entry-content {}
+.entry-content a {}
+.entry-content a:hover {}
+
+#meta {}
+.postmetadata {}
+
+
+.sidebar li a {
+  background-color: #fff;
+  color: #66605d;
+  background-color: rgba(255,255,255,0.7);
+  border: 0;
+  font-family: "camingodos-web", sans-serif;
+  font-size: 99%;
+  display: block;
+  padding: 0.5em 2.5%;
+  margin-bottom: 0.5em;
+  border-bottom: solid 2px rgba(0,0,0,0.1);
+  
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.sidebar li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.single aside.left ol {
+  list-style-type: upper-roman;
+  margin-left: 1.5em;
+}
+
+.single aside.left ol li {
+  margin: 0.75em 0;
+}
+
+.single aside.left ol li ol li {
+  margin: 0;
+}
+
+.single aside.left ol ol {
+  list-style-type: decimal;
+  margin-left: 1.5em;
+}
+
+.single aside.left a.active {
+  background-color: #fffbcc;
+  border-color: rgba(0,0,0,0.4);
+}
+
+.single aside .post-meta-key {
+  display: none;
+}
+
+.single a#resources {
+  cursor: pointer;
+}
+
+.single .entry-content {
+  font-size: 1.05em;
+}
+
+.entry-content strong {
+  font-family: "camingodos-web", sans-serif;
+  color: #333;
+}
+
+.navgation {}
+.next-posts {}
+.prev-posts {}
+
+#searchform {}
+#s {}
+#searchsubmt {}
+	
+ol.commentlist {list-style: none;}
+ol.commentlist li {}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard {}
+ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
+ol.commentlist li.comment div.vcard cite.fn a.url {}
+ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
+ol.commentlist li.comment div.vcard img.avatar-32 {}
+ol.commentlist li.comment div.vcard img.photo {}
+ol.commentlist li.comment div.vcard span.says {}
+ol.commentlist li.comment div.commentmetadata {}
+ol.commentlist li.comment div.comment-meta {font-size: 10px;}
+ol.commentlist li.comment div.comment-meta a {color: #ccc;}
+ol.commentlist li.comment p {}
+ol.commentlist li.comment ul {}
+ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply a {font-weight: bold;}
+ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-5 {}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even {background: #fff;}
+ol.commentlist li.odd {background: #f6f6f6;}
+ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.thread-alt {}
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+a.post-edit-link {  
+    background: url(../../../../wp-admin/images/menu.png) #fff 119px 0;  
+    text-indent: 100%;  
+    overflow: hidden;  
+    display: inline-block;  
+    text-indent: -99em;  
+    white-space: nowrap;  
+    height: 24px;  
+    width: 24px;  
+    position: absolute;  
+    left: 1em;  
+    border: 0;
+    } 
+a.post-edit-link:hover {  
+  background-color: yellow;
+}
+
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-width: 36em) {
+    /* 700px or so */
+    
+    body {
+      color: #4e4a49;
+    }
+    
+    body.home {
+      background-image: url(_/bg.jpg);
+      background-position: 50% -7em;
+    }
+    
+    .home #get-involved {
+      background-image: url(_/get-involved_bg.jpg);
+      background-position: 50% -5em;
+    }
+
+    .initiatives article {
+      width: 50%;
+      float: left;
+    }
+    
+    article.one, article.two {
+      width: 46.5%;
+    }
+    
+    #big article {
+      padding-top: 18em;
+    }
+    
+    nav {
+      display: block;
+    }
+    
+    .initiatives article div {
+      max-width: 28.5em;
+    }
+
+    .initiatives #rollingjub div {
+      float: right;
+      padding-right: 5%;
+    }
+    
+    .initiatives #drom div {
+      float: left;
+      padding-left: 5%;
+    }
+
+    .initiatives #rollingjub {
+      background-image: url(_/rj_bg.jpg);
+    }
+
+    .initiatives #rollingjub:hover {
+      background-image: url(_/rj_bg_color.jpg);
+    }
+
+    .initiatives #drom {
+      background-image: url(_/drom3_bg.jpg);
+    }
+
+    .initiatives #drom:hover {
+      background-image: url(_/drom2_bg_color.jpg);
+    }
+
+    .initiatives#kit {
+      background-image: url(_/kit_bg.jpg);
+    }
+
+    .initiatives#kit:hover {
+      background-image: url(_/kit_bg_hover.jpg);
+      background-color: #3f3b39;
+    }
+
+    #get-involved dt .dot {
+      display: inline-block;
+      padding-right: 0.5em;
+      font-size: 1.5em;
+      color: rgba(0,0,0, 0.3);
+    }
+
+    #get-involved dt .time {
+      display: inline-block;
+      width: 9.5em;
+    }
+    
+    
+    /***********************
+    pages */
+    
+    .page-id-527 {
+        background: url(_/principles_page_bg.jpg) #f5f3d3 no-repeat;
+    }
+    
+    .page h1 {
+        margin-top: 1.25em;
+    }
+    
+}
+
+@media only screen and (min-width: 48em) {
+    /* 850px or so */
+    
+    body {
+      padding-top: 3.5em;
+    }
+    
+    h1 img {
+      max-width: 250px;
+    }
+
+    #about {
+      padding-left: 20em;
+    }
+    
+    #get-involved figure {
+      font-size: 0.85em;
+      line-height: 1.5em;
+    }
+
+    #get-involved .gce-page-list, #get-involved h3#event {
+      float: right;
+      width: 66%;
+    }
+    
+    .single aside.left {
+      margin-top: 8em;
+      font-size: 0.85em;
+      line-height: 1.5em;
+      position: fixed;
+    }
+    
+    aside {
+      width: 30%;
+      float: left;
+      margin-right: 3%;
+    }
+    
+    #more aside {
+      width: 28%;
+      float: right;
+      margin-right: 0;
+      margin-left: 3%;
+      padding: 0 2.75%;
+    }
+    
+    #more aside h3 {
+      font-size: 1.5em;
+    }
+    
+    p.special {
+      margin: 1.5em 0;
+      /*margin-left: -8em; indent */
+      max-width: 26em;
+    }
+
+    .initiatives #rollingjub div, article.one {
+      padding-right: 3.5%;
+    }
+    
+    .initiatives #drom div, article.two {
+      padding-left: 3.5%;
+    }
+    
+    #title {
+      width: 280px;
+      position: fixed;
+      left: 50%;
+      z-index: 100;
+      margin-left: -52.5%;
+    }
+    
+    nav ul {
+      margin: 0 auto;
+      max-width: 34em;
+      padding-left: 13em;
+    }
+
+    .home #blog .post {
+      float: left;
+      width: 62%;
+      padding-left: 0;
+    }
+
+    .home #blog .sidebar {
+      float: right;
+      width: 33.5%;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #about, .post {
+      padding-left: 14em;
+      padding-right: 0;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    
+    h1 img {
+      max-width: 100%;
+    }
+    
+    .single aside.left {
+      margin-top: 11em;
+      width: 15.5em;
+    }
+
+    #title {
+      margin-left: -32em;
+    }
+    
+    nav ul {
+      padding-left: 18.25em;
+      max-width: 41.75em;
+    }
+
+    #about, .post {
+      padding-left: 18.25em;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+@media all and (orientation: portrait) {
+	
+}
+
+@media all and (orientation: landscape) {
+	
+}
