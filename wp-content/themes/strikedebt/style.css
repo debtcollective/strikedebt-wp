@@ -721,11 +721,7 @@ footer#main {
 }
 
 #drom2 {
-  position: absolute;
-  bottom: 0;
   width: 19.5em;
-  margin-left: -22em;
-  float: left;
   text-align: center;
 }
 
@@ -1217,20 +1213,13 @@ a.post-edit-link:hover {
     #about, .post {
       padding-left: 18.25em;
     }
-}
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-
-@media all and (orientation: portrait) {
-	
-}
-
-@media all and (orientation: landscape) {
-	
+    #drom2 {
+      position: absolute;
+      bottom: 0;
+      margin-left: -22em;
+      float: left;
+    }
 }
 
 
