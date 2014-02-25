@@ -77,7 +77,6 @@
 
 
 function drom_register() {
- 
 	$labels = array(
 		'name' => _x('DROM', 'post type general name'),
 		'singular_name' => _x('DROM Chapter', 'post type singular name'),
@@ -98,6 +97,7 @@ function drom_register() {
 	    'publicly_queryable' => true,
 	    'show_ui' => true, 
 	    'show_in_menu' => true, 
+	    'show_in_nav_menus' => true,
 	    'query_var' => true,
 	    'rewrite' => array( 'slug' => 'drom', 'with_front' => false ),
 	    'capability_type' => 'post',
@@ -111,5 +111,30 @@ function drom_register() {
 	register_post_type( 'drom' , $args );
 }
 
-	add_action('init', 'drom_register');
+add_action('init', 'drom_register');
+
+function register_sd_menu() {
+  register_nav_menu('header',__( 'Header' ));
+  register_nav_menu('drom-toc',__( 'DROM TOC' ));
+}
+add_action( 'init', 'register_sd_menu' );
+
+
+
+function customformatTinyMCE($init) {
+	// Add block format elements you want to show in dropdown
+	$init['theme_advanced_blockformats'] = 'p,h2,h3,h4,h5,h6';
+
+	// Add elements not included in standard tinyMCE doropdown p,h1,h2,h3,h4,h5,h6
+	$init['extended_valid_elements'] = 'textbox';
+
+	return $init;
+}
+
+// Modify Tiny_MCE init
+add_filter('tiny_mce_before_init', 'customformatTinyMCE' );
+
+
+
+
 ?>

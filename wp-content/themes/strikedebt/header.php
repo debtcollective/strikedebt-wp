@@ -107,13 +107,16 @@
 
     <header>
 	
-  	 <nav class="clearfix"><ul>
+  	 <nav class="clearfix">
+  	 <!--<ul>
   	   <li id="li_about"><a href="/#about" id="about_nav">About</a></li>
   	   <li><a href="/#get-involved" id="get-involved_nav">Get Involved</a></li>
   	   <li><a href="/#initiatives" id="initiatives_nav">Current Initiatives</a></li>
   	   <li><a href="/#blog" id="blog_nav">Blog</a></li>
   	   <li><a href="/#more" id="more_nav">More Info</a></li>
-  	 </ul></nav>
+  	 </ul>-->
+  	 <?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+  	 </nav>
   		
   		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_directory'); ?>/_/title.png" alt="Strike Debt!" id="title" /></a></h1>
   		

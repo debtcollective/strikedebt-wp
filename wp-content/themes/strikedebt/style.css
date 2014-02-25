@@ -714,6 +714,51 @@ footer#main {
 
 /************************************
 
+    TEMP/PROMO */
+
+#about {
+  position: relative;
+}
+
+#drom2 {
+  position: absolute;
+  bottom: 0;
+  width: 19.5em;
+  margin-left: -22em;
+  float: left;
+  text-align: center;
+}
+
+#drom2 h2 {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  color: #fff;
+  text-shadow: none;
+}
+
+#drom2 h3 {
+  font-family: "rooney-web",sans-serif;
+  letter-spacing: 0;
+  font-weight: normal;
+  font-size: 0.95em;
+  line-height: 1.4em;
+  margin: 0;
+  color: #fff;
+  text-shadow: none;
+}
+
+#drom2 div {
+  background-color: rgba(81,76,74,0.85);
+  padding: 1.25em;
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+}
+
+
+/************************************
+
     PAGES */
       
     
@@ -1187,3 +1232,80 @@ a.post-edit-link:hover {
 @media all and (orientation: landscape) {
 	
 }
+
+
+/*    DROM Chapters  */
+
+#drom-toc {
+	width:25%;
+	float:left;
+	position:fixed;
+	top:200px;
+}
+
+.drom-chapter .drom {
+	width:70%;
+	float:right;
+}
+
+.drom-chapter .drom h1 {
+	font-size:2em;
+	line-height: 1.1em;
+    text-align: left;
+}
+.drom-chapter .drom h2 {
+	font-size:1.75em;
+	font-weight:bold;
+}
+.drom-chapter .drom h3 {
+	font-size:1.5em;
+	font-weight:bold;
+}
+.drom-chapter .drom h4 {
+	font-size:1.25em;
+	font-weight:bold;
+}
+
+.drom-chapter .drom ol {
+	margin-left:2em;
+	margin-top:1em;
+}
+.drom-chapter .drom ol li{
+	padding-bottom:1em;
+}
+.drom-chapter .drom ul {
+	list-style: disc outside none;
+	margin-left:2em;
+}
+.drom-chapter .drom ul li{
+	padding-bottom:1em;
+}
+.drom-chapter .drom ul li ul li {
+	padding-bottom:0px;
+}
+.drom-chapter .drom aside {
+	border:2px solid #892828;
+	padding:1.5em;
+	margin: 0em 2em 1em 0;
+}
+.drom-chapter .drom aside ul {
+	/*list-style: none outside none;*/
+	margin-left:1em;
+}
+.drom-chapter .drom aside ul li {
+	padding-left:0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
