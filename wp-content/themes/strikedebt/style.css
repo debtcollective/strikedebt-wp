@@ -428,6 +428,7 @@ button, a.button, input[type="submit"], .more-link, dt {
   background-color: rgba(255,255,255,0.7);
   border: 0;
   font-family: "camingodos-web", sans-serif;
+  font-weight: 700;
   font-size: 99%;
   display: inline-block;
   padding: 0.5em 2.5%;
@@ -546,6 +547,7 @@ input[type="text"].wepay-widget-input.donation-input-pay {
   height: auto !important;
   width: 5.5em !important;
   font-family: "camingodos-web", sans-serif !important;
+  font-weight: 700;
   padding: 0.25em !important;
   margin: 0.3em 0.75em 0.25em 0 !important;
   border: 0.1em solid #ddd !important;
@@ -852,6 +854,7 @@ footer#main {
   background-color: rgba(255,255,255,0.7);
   border: 0;
   font-family: "camingodos-web", sans-serif;
+  font-weight: 700;
   font-size: 99%;
   display: block;
   padding: 0.5em 2.5%;
@@ -908,6 +911,7 @@ footer#main {
 
 .entry-content strong {
   font-family: "camingodos-web", sans-serif;
+  font-weight: 700;
   color: #333;
 }
 
@@ -975,7 +979,71 @@ a.post-edit-link {
     } 
 a.post-edit-link:hover {  
   background-color: yellow;
+}}
+
+
+/*    DROM Chapters  */
+
+#drom-toc {
+  width:25%;
+  float:left;
+  position:fixed;
+  top:200px;
 }
+
+.drom-chapter .drom {
+  width:70%;
+  float:right;
+}
+
+.drom-chapter .drom h1 {
+  font-size:2em;
+  line-height: 1.1em;
+    text-align: left;
+}
+.drom-chapter .drom h2 {
+  font-size:1.75em;
+  font-weight:bold;
+}
+.drom-chapter .drom h3 {
+  font-size:1.5em;
+  font-weight:bold;
+}
+.drom-chapter .drom h4 {
+  font-size:1.25em;
+  font-weight:bold;
+}
+
+.drom-chapter .drom ol {
+  margin-left:2em;
+  margin-top:1em;
+}
+.drom-chapter .drom ol li{
+  padding-bottom:1em;
+}
+.drom-chapter .drom ul {
+  list-style: disc outside none;
+  margin-left:2em;
+}
+.drom-chapter .drom ul li{
+  padding-bottom:1em;
+}
+.drom-chapter .drom ul li ul li {
+  padding-bottom:0px;
+}
+.drom-chapter .drom aside {
+  border:2px solid #892828;
+  padding:1.5em;
+  margin: 0em 2em 1em 0;
+}
+.drom-chapter .drom aside ul {
+  /*list-style: none outside none;*/
+  margin-left:1em;
+}
+.drom-chapter .drom aside ul li {
+  padding-left:0.5em;
+}
+
 
 
 
@@ -1220,81 +1288,5 @@ a.post-edit-link:hover {
       margin-left: -22em;
       float: left;
     }
+
 }
-
-
-/*    DROM Chapters  */
-
-#drom-toc {
-	width:25%;
-	float:left;
-	position:fixed;
-	top:200px;
-}
-
-.drom-chapter .drom {
-	width:70%;
-	float:right;
-}
-
-.drom-chapter .drom h1 {
-	font-size:2em;
-	line-height: 1.1em;
-    text-align: left;
-}
-.drom-chapter .drom h2 {
-	font-size:1.75em;
-	font-weight:bold;
-}
-.drom-chapter .drom h3 {
-	font-size:1.5em;
-	font-weight:bold;
-}
-.drom-chapter .drom h4 {
-	font-size:1.25em;
-	font-weight:bold;
-}
-
-.drom-chapter .drom ol {
-	margin-left:2em;
-	margin-top:1em;
-}
-.drom-chapter .drom ol li{
-	padding-bottom:1em;
-}
-.drom-chapter .drom ul {
-	list-style: disc outside none;
-	margin-left:2em;
-}
-.drom-chapter .drom ul li{
-	padding-bottom:1em;
-}
-.drom-chapter .drom ul li ul li {
-	padding-bottom:0px;
-}
-.drom-chapter .drom aside {
-	border:2px solid #892828;
-	padding:1.5em;
-	margin: 0em 2em 1em 0;
-}
-.drom-chapter .drom aside ul {
-	/*list-style: none outside none;*/
-	margin-left:1em;
-}
-.drom-chapter .drom aside ul li {
-	padding-left:0.5em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

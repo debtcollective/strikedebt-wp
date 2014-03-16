@@ -3,7 +3,7 @@
   <section class="intro" id="about">
 	   <h3 class="asphaltcondensedblack">You are not a loan.</h3>
 	   
-	   <p class="special">Strike Debt is a nationwide movement of debt resistors fighting for economic justice and democratic freedom.</p>
+	   <p class="special">Strike Debt is a nationwide movement of debt resisters fighting for economic justice and democratic freedom.</p>
 
       <p>Debt is a tie that binds the 99%. With stagnant wages, systemic unemployment, and public service cuts, we are forced to go into debt for the basic things in life &mdash; and thus surrender our futures to the banks. Debt is major source of profit and power for Wall Street that works to keep us isolated, ashamed, and afraid. Using direct action, research, education, and the arts, we are coming together to challenge this illegitimate system while imagining and creating alternatives. We want an economy in which our debts are to our friends, families, and communities &mdash; and not to the 1%.</p>
 

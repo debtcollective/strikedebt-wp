@@ -1,0 +1,242 @@
+.drom h1, .drom h2 {
+  font-family: "calluna", serif;
+  font-weight: 600; }
+
+.drom header figure a, .drom.chapter nav.chapters ul li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .toc-list span, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter h2, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4 {
+  font-family: "calluna-sans", sans-serif;
+  font-weight: 600; }
+
+.drom header figure a, .drom.chapter nav.chapters ul li a {
+  display: inline-block;
+  padding: 0.75em 1em;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #e8dcc6;
+  color: #9e004f;
+  text-align: center;
+  border-color: #e1d1b3;
+  border-radius: 0.3em;
+  line-height: normal; }
+  .drom header figure a:hover, .drom.chapter nav.chapters ul li a:hover {
+    background: #e1d1b3;
+    border-color: #dac6a1; }
+
+.drom header figure a {
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 1em 1.25em;
+  border-width: 0.2em; }
+
+.drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter {
+  display: block;
+  float: left;
+  color: #9e004f;
+  font-size: 3.25em;
+  font-weight: 300;
+  margin: 0.24em 0.05em 0.1em -0.1em; }
+
+.drom {
+  padding-top: 0;
+  background: #fdf9e0;
+  border-top: 1.25em solid #e8dcc6;
+  color: #606870;
+  line-height: 1.6em; }
+  .drom * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .drom section {
+    border-top: 1.25em solid #e8dcc6;
+    padding: 2.5em 0; }
+  .drom a {
+    border-bottom: 0.15em solid #d8e4f1;
+    color: #3d72a6; }
+    .drom a:hover {
+      background: none;
+      border-color: #7ba5ce; }
+  .drom p {
+    margin-top: 0; }
+  .drom .wrapper, .drom article {
+    max-width: 700px;
+    padding: 0 1.25em;
+    margin: 0 auto; }
+  .drom h1, .drom h2 {
+    color: #9e004f;
+    text-align: center;
+    font-size: 3.75em;
+    line-height: 1.1em;
+    text-transform: none;
+    text-shadow: none;
+    letter-spacing: 0; }
+  .drom h3, .drom h4 {
+    color: #9e004f; }
+  .drom h2 {
+    font-size: 2.5em;
+    margin-top: 0; }
+  .drom header {
+    display: table;
+    width: 100%; }
+    .drom header .head-wrap {
+      padding: 3.5em 1.25em;
+      text-align: left;
+      vertical-align: middle;
+      display: table-cell; }
+    .drom header h1 {
+      max-width: 540px;
+      margin: 0 auto; }
+    .drom header .intro {
+      margin: 3.5em auto 5em; }
+    .drom header figure a {
+      display: block; }
+    .drom header #title {
+      width: 100px;
+      top: -0.5em; }
+    .drom header p {
+      font-size: 1.05em;
+      line-height: 1.6em; }
+  .drom #toc {
+    text-align: center; }
+  .drom .toc-list {
+    list-style: none;
+    text-align: left; }
+    .drom .toc-list:last-child li:last-child a {
+      padding: 0.7em 1em; }
+    .drom .toc-list span {
+      display: block;
+      color: #9e004f;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-transform: uppercase; }
+    .drom .toc-list a {
+      display: block;
+      padding: 0.75em 1em;
+      border-bottom: 1px solid #cecece;
+      line-height: 1.4em;
+      color: #313539; }
+      .drom .toc-list a:hover {
+        background-color: #ebe1cd; }
+  .drom #praise .wrapper {
+    max-width: 960px; }
+  .drom #praise figure .attr {
+    color: #9e004f;
+    margin: -0.75em 0 2.5em; }
+  .drom.chapter {
+    background: #fdf9e0;
+    color: #313539;
+    font-weight: 400; }
+    .drom.chapter header .wrapper {
+      padding: 0.5em 1.25em 1.25em;
+      width: auto;
+      max-width: none; }
+    .drom.chapter header h3 {
+      font-size: 1.25em;
+      margin: 0;
+      margin-left: 5em;
+      max-width: none;
+      text-align: left;
+      color: #939ba3;
+      text-shadow: none; }
+    .drom.chapter header #title {
+      width: 75px;
+      left: 2em;
+      margin-left: 0; }
+    .drom.chapter h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      text-align: left; }
+    .drom.chapter nav.chapters {
+      position: static;
+      background: none; }
+      .drom.chapter nav.chapters ul {
+        max-width: none;
+        font-size: 0.1px; }
+        .drom.chapter nav.chapters ul li {
+          font-size: 16px;
+          width: 33.133%;
+          margin-right: 0.2%;
+          display: inline-block; }
+          .drom.chapter nav.chapters ul li:last-child {
+            margin: 0; }
+          .drom.chapter nav.chapters ul li a {
+            float: none;
+            display: block;
+            border-radius: 0;
+            margin: 0; }
+    .drom.chapter h2 {
+      margin-left: 1.5em;
+      font-weight: 600; }
+    .drom.chapter h1 {
+      font-size: 2.75em;
+      max-width: 18em;
+      margin: 0 auto;
+      padding: 0 0.33em;
+      margin-bottom: 0.75em; }
+    .drom.chapter #main {
+      padding-top: 1em; }
+    .drom.chapter .toc {
+      position: fixed;
+      margin-left: 2.5em;
+      width: 20%; }
+      .drom.chapter .toc .active {
+        background-color: #ffe2aa; }
+    .drom.chapter article {
+      max-width: 40em;
+      margin-bottom: 3em; }
+      .drom.chapter article h1 + p, .drom.chapter article h2 + p, .drom.chapter article h3 + p, .drom.chapter article h4 + p, .drom.chapter article p:first-of-type {
+        text-indent: 0; }
+      .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4 {
+        font-weight: 300;
+        font-size: 1.85em;
+        text-shadow: none;
+        text-align: left;
+        margin: 1.15em 0 0.5em 0;
+        text-transform: none; }
+      .drom.chapter article h3 {
+        font-size: 1.25em;
+        font-weight: 600; }
+      .drom.chapter article h4 {
+        font-size: 1.25em;
+        font-weight: 300;
+        color: #313539; }
+      .drom.chapter article ul {
+        list-style: square;
+        margin: 1.25em 0;
+        margin-left: 2em; }
+      .drom.chapter article p {
+        margin-bottom: 0;
+        text-indent: 2em; }
+      .drom.chapter article.resources {
+        font-size: 0.85em;
+        line-height: 1.65em;
+        max-width: 46.5em; }
+
+@media only screen and (min-width: 700px) {
+  .drom header .wrapper {
+    width: 700px; }
+  .drom .toc-list {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top; }
+    .drom .toc-list:last-child {
+      margin-left: 5%; }
+  .drom figure {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top; }
+    .drom figure:nth-of-type(even) {
+      margin-left: 5%; } }
+@media only screen and (min-width: 1040px) {
+  .drom.chapter h1 {
+    font-size: 3em; }
+  .drom.chapter article {
+    font-size: 1.05em;
+    line-height: 1.6em; }
+    .drom.chapter article p {
+      text-indent: 2.5em; }
+    .drom.chapter article ul {
+      margin-left: 2.5em; }
+    .drom.chapter article.resources {
+      font-size: 0.885em;
+      line-height: 1.65em; } }

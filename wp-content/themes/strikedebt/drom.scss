@@ -1,0 +1,440 @@
+
+$dark-grey: 	#313539; // blueish
+// $dark-grey:	#28313a; // more saturated
+$dark-mid-grey: lighten($dark-grey, 20%);
+$mid-grey:		lighten($dark-grey, 40%);
+$almost-white:	lighten($dark-grey, 60%);
+$warm-grey:		#9f9b8e;
+// $dark-grey: #3f3a49; // purpleish
+
+// $magenta:		#9e0038; // less magenta-ey
+$magenta: 		#9e004f;
+$dark-red: 		#96171a;
+$sunshine:		#ffd990;
+$grey-sunshine:	#dac6a1;
+$light-sunshine:#fdf9e0;
+$linkblue:		#3d72a6;
+
+$rule: 			desaturate(lighten($mid-grey, 20%), 30%);
+
+
+%calluna {
+  font-family: "calluna", serif;
+  font-weight: 600;
+}
+
+%sans {
+  // font-family: "camingodos-web", sans-serif;
+  font-family: "calluna-sans", sans-serif;
+  font-weight: 600;
+}
+
+%button {
+	display: inline-block;
+	padding: 0.75em 1em;
+	font-size: 0.95em;
+	font-weight: 600;
+	text-transform: uppercase;
+	@extend %sans;
+	background: lighten($grey-sunshine, 10%);
+	// background: lighten($warm-grey, 10%);
+	color: $magenta;
+	text-align: center;
+	border-color: lighten($grey-sunshine, 5%);
+	border-radius: 0.3em;
+	line-height: normal;
+
+	&:hover {
+		background: lighten($grey-sunshine, 5%);
+		border-color: $grey-sunshine;
+	}
+}
+
+%button-lg {
+	@extend %button;
+	font-size: 1.2em;
+	font-weight: 600;
+	padding: 1em 1.25em;
+	border-width: 0.2em;
+}
+
+%drop-cap {
+	display: block;
+	float: left;
+	@extend %sans;
+	color: $magenta;
+	font-size: 3.25em;
+	font-weight: 300;
+	margin: 0.24em 0.05em 0.1em -0.1em;
+}
+
+.drom {
+
+	* {
+	  	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+	}
+
+	padding-top: 0;
+	background: $light-sunshine;
+	border-top: 1.25em solid lighten($grey-sunshine, 10%);
+	color: $dark-mid-grey;
+	line-height: 1.6em;
+
+	section {
+		border-top: 1.25em solid lighten($grey-sunshine, 10%);
+		padding: 2.5em 0;
+	}
+
+	a {
+		border-bottom: 0.15em solid lighten($linkblue, 45%);
+		color: $linkblue;
+
+		&:hover {
+			background: none;
+			border-color: lighten($linkblue, 20%);
+		}
+	}
+
+	p {
+		margin-top: 0;
+	}
+
+	.wrapper, article {
+		max-width: 700px;
+		padding: 0 1.25em;
+		margin: 0 auto;
+	}
+
+	h1, h2 {
+		color: $magenta;
+		text-align: center;
+		@extend %calluna;
+		font-size: 3.75em;
+		line-height: 1.1em;
+		text-transform: none;
+		text-shadow: none;
+		letter-spacing: 0;
+	}
+
+	h3, h4 {
+		color: $magenta;
+	}
+
+	h2 {
+		font-size: 2.5em;
+		margin-top: 0;
+	}
+
+	header {
+		display: table;
+		width: 100%;
+
+		.head-wrap {
+			padding: 3.5em 1.25em;
+			text-align: left;
+			vertical-align: middle;
+			display: table-cell;
+		}
+
+		h1 {
+			max-width: 540px;
+			margin: 0 auto;
+		}
+
+		.intro {
+			margin: 3.5em auto 5em;
+		}
+
+		figure a {
+			@extend %button-lg;
+			display: block;
+		}
+
+		#title {
+			width: 100px;
+			top: -0.5em;
+		}
+
+		p {
+			font-size: 1.05em;
+			line-height: 1.6em;
+
+			&::first-letter {
+				@extend %drop-cap;
+			}
+		}
+	}
+
+	#toc {
+		text-align: center;
+	}
+
+	.toc-list {
+		list-style: none;
+		text-align: left;
+
+		&:last-child {
+
+			li:last-child a {
+				padding: 0.7em 1em;
+			}
+		}
+
+		span {
+			display: block;
+			color: $magenta;
+			@extend %sans;
+			font-size: 0.9em;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		a {
+			display: block;
+			padding: 0.75em 1em;
+			border-bottom: 1px solid $rule;
+			line-height: 1.4em;
+			color: $dark-grey;
+
+			&:hover {
+				background-color: lighten($grey-sunshine, 12%);
+			}
+		}
+	}
+
+	#praise {
+
+		.wrapper {
+			max-width: 960px;
+		}
+
+		figure {
+
+			.attr {
+				@extend %sans;
+				color: $magenta;
+				margin: -0.75em 0 2.5em;
+			}
+		}
+	}
+
+	&.chapter {
+
+		background: $light-sunshine;
+		color: $dark-grey;
+		font-weight: 400;
+
+		header {
+			.wrapper {
+				padding: 0.5em 1.25em 1.25em;
+				width: auto;
+				max-width: none;
+			}
+
+			h3 {
+				font-size: 1.25em;
+				margin: 0;
+				margin-left: 5em;
+				max-width: none;
+				text-align: left;
+				@extend %sans;
+				// font-weight: 300;
+				color: $mid-grey;
+				text-shadow: none;
+			}
+
+			#title {
+				width: 75px;
+				left: 2em;
+				margin-left: 0;
+			}
+		}
+
+		h2 {
+			@extend %sans;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			text-align: left;
+		}
+
+		nav.chapters {
+			position: static;
+			background: none;
+
+			ul {
+				max-width: none;
+				font-size: 0.1px;
+
+				li {
+					font-size: 16px;
+					width: 33.133%;
+					margin-right: 0.2%;
+					display: inline-block;
+
+					&:last-child {
+						margin: 0;
+					}
+
+					a {
+						float: none;
+						@extend %button;
+						display: block;
+						border-radius: 0;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		h2 {
+			margin-left: 1.5em;
+			font-weight: 600;
+		}
+
+		h1 {
+			font-size: 2.75em;
+			max-width: 18em;
+			margin: 0 auto;
+			padding: 0 0.33em;
+			margin-bottom: 0.75em;
+		}
+
+		#main {
+			padding-top: 1em;
+		}
+
+		.toc {
+			position: fixed;
+			margin-left: 2.5em;
+			width: 20%;
+
+			.active {
+				background-color: lighten($sunshine, 5%);
+			}
+		}
+
+		article {
+			max-width: 40em;
+			margin-bottom: 3em;
+
+			p:first-of-type::first-letter {
+				@extend %drop-cap;
+				// font-size: 5.66em;
+				// font-weight: 100;
+			}
+
+			h1 + p, h2 + p, h3 + p, h4 + p, p:first-of-type {
+				text-indent: 0;
+			}
+
+			h2, h3, h4 {
+				@extend %sans;
+				font-weight: 300;
+				font-size: 1.85em;
+				text-shadow: none;
+				text-align: left;
+				margin: 1.15em 0 0.5em 0;
+				text-transform: none;
+			}
+
+			h3 {
+				font-size: 1.25em;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-size: 1.25em;
+				font-weight: 300;
+				color: $dark-grey;
+			}
+
+			ul {
+				list-style: square;
+				margin: 1.25em 0;
+				margin-left: 2em;
+			}
+
+			p {
+				margin-bottom: 0;
+				text-indent: 2em;
+
+			}
+
+			&.resources {
+				font-size: 0.85em;
+				line-height: 1.65em;
+				max-width: 46.5em;
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: 700px) {
+
+	.drom {
+
+		header {
+			.wrapper {
+				width: 700px;
+			}
+		}
+
+		.toc-list {
+			width: 47%;
+			display: inline-block;
+			vertical-align: top;
+
+			&:last-child {
+				margin-left: 5%;
+			}
+		}
+
+		figure {
+			width: 47%;
+			display: inline-block;
+			vertical-align: top;
+
+			&:nth-of-type(even) {
+				margin-left: 5%;
+			}
+		}
+
+	}
+
+}
+
+
+
+@media only screen and (min-width: 1040px) {
+
+	.drom.chapter {
+
+		h1 {
+			font-size: 3em;
+		}
+
+		article {
+			font-size: 1.05em;
+			line-height: 1.6em;
+
+			p {
+				text-indent: 2.5em;
+			}
+
+			ul {
+				margin-left: 2.5em;
+			}
+
+			&.resources {
+				font-size: 0.885em;
+				line-height: 1.65em;
+			}
+		}
+	}
+
+}
