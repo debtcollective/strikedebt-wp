@@ -12,9 +12,12 @@ $magenta: 		#9e004f;
 $dark-red: 		#96171a;
 $sunshine:		#ffd990;
 $grey-sunshine:	#dac6a1;
+$sun-shadow:	lighten($grey-sunshine, 10%);
 $light-sunshine:#fdf9e0;
 $linkblue:		#3d72a6;
+$bg-grey:		desaturate(darken($grey-sunshine, 10%), 20%);
 
+$text:			$dark-grey;
 $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 
@@ -29,6 +32,11 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
   font-weight: 600;
 }
 
+%serif {
+  font-family: "rooney-web", sans-serif;
+  font-weight: 400;
+}
+
 %button {
 	display: inline-block;
 	padding: 0.75em 1em;
@@ -36,7 +44,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	font-weight: 600;
 	text-transform: uppercase;
 	@extend %sans;
-	background: lighten($grey-sunshine, 10%);
+	background: $sun-shadow;
 	// background: lighten($warm-grey, 10%);
 	color: $magenta;
 	text-align: center;
@@ -68,6 +76,28 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	margin: 0.24em 0.05em 0.1em -0.1em;
 }
 
+%hyphenate {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+/* The Magnificent Clearfix -- j.mp/bestclearfix */
+%fixer {content: "\0020"; display: block; height: 0; overflow: hidden;}
+%clearfix {
+	zoom: 1; 
+	&:before {@extend %fixer;}
+	&:after {@extend %fixer; clear: both;}
+}
+
+@mixin transition ($prop: all, $duration: 0.25s, $ease: ease) {
+  -webkit-transition: $prop $duration $ease;
+  -moz-transition: $prop $duration $ease;
+  -ms-transition: $prop $duration $ease;
+  -o-transition: $prop $duration $ease;
+  transition: $prop $duration $ease;
+}
+
 .drom {
 
 	* {
@@ -78,12 +108,12 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 	padding-top: 0;
 	background: $light-sunshine;
-	border-top: 1.25em solid lighten($grey-sunshine, 10%);
+	border-top: 1.25em solid $sun-shadow;
 	color: $dark-mid-grey;
 	line-height: 1.6em;
 
 	section {
-		border-top: 1.25em solid lighten($grey-sunshine, 10%);
+		border-top: 1.25em solid $sun-shadow;
 		padding: 2.5em 0;
 	}
 
@@ -125,6 +155,25 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	h2 {
 		font-size: 2.5em;
 		margin-top: 0;
+	}
+
+	.menu-trigger {
+		position: fixed;
+		top: 1.25em;
+		left: 0;
+		margin-left: 1.5em;
+		font-size: 1.15em;
+		border: 0;
+		color: $bg-grey;
+		@extend %sans;
+		text-transform: uppercase;
+
+		i {
+			font-size: 1.2em;
+			vertical-align: text-bottom;
+			line-height: 1em;
+			margin-right: 0.34em;
+		}
 	}
 
 	header {
@@ -171,6 +220,15 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 		text-align: center;
 	}
 
+	.chapter-num {
+		display: block;
+		color: $magenta;
+		@extend %sans;
+		font-size: 0.9em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
 	.toc-list {
 		list-style: none;
 		text-align: left;
@@ -180,15 +238,6 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			li:last-child a {
 				padding: 0.7em 1em;
 			}
-		}
-
-		span {
-			display: block;
-			color: $magenta;
-			@extend %sans;
-			font-size: 0.9em;
-			font-weight: 700;
-			text-transform: uppercase;
 		}
 
 		a {
@@ -221,77 +270,200 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	}
 
 	&.chapter {
-
+		border: 0;
 		background: $light-sunshine;
-		color: $dark-grey;
+		color: $text;
 		font-weight: 400;
 
 		header {
+			// background: $sun-shadow;
+			margin-bottom: 2.5em;
+
+			a {
+				color: $bg-grey;
+			}
+
 			.wrapper {
-				padding: 0.5em 1.25em 1.25em;
 				width: auto;
 				max-width: none;
+				margin-top: 0.9em;
 			}
 
 			h3 {
 				font-size: 1.25em;
 				margin: 0;
-				margin-left: 5em;
+				padding: 0.5em 0;
 				max-width: none;
-				text-align: left;
+				text-align: center;
 				@extend %sans;
-				// font-weight: 300;
-				color: $mid-grey;
+				font-weight: 600;
 				text-shadow: none;
+
+				a {
+					// color: $dark-mid-grey;
+					border-width: 0.1em;
+					border-color: rgba($bg-grey, 0.5);
+
+					&:hover {
+						border-color: $bg-grey;
+					}
+				}
+			}
+
+			#project-of {
+				width: 12em;
+				border: 0;
+				// color: $dark-mid-grey;
+				@extend %sans;
+				// text-transform: uppercase;
+				// font-weight: 700;
+				line-height: normal;
+				// font-size: 0.95em;
+				position: absolute;
+				right: 2em;
+				text-align: right;
 			}
 
 			#title {
-				width: 75px;
-				left: 2em;
-				margin-left: 0;
+				position: static;
+				margin: 0;
+				margin-top: -1.33em;
+				margin-left: 0.75em;
+				left: auto;
+				top: -1em;
+				width: 80px;
+				float: right;
 			}
 		}
 
-		h2 {
-			@extend %sans;
-			font-weight: 700;
-			text-transform: uppercase;
-			font-size: 1.5em;
-			text-align: left;
+		section {
+			border: 0;
 		}
 
 		nav.chapters {
 			position: static;
 			background: none;
+			@extend %sans;
+			@extend %clearfix;
 
-			ul {
-				max-width: none;
-				font-size: 0.1px;
+			// next/previous
+			&#side a {
+				position: fixed;
+				width: 13em;
+				top: 50%;
+				left: -10.5em;
+				height: 9em;
+				margin-top: -4.5em;
+				padding-right: 0;
+				@extend %button;
+				// @extend %serif;
+				font-size: 1.05em;
+				text-transform: none;
+				color: $dark-mid-grey;
+				@extend %hyphenate;
+				@include transition(all, 0.4s);
 
-				li {
-					font-size: 16px;
-					width: 33.133%;
-					margin-right: 0.2%;
-					display: inline-block;
+				.chapter-num {
+					margin-bottom: 0.5em;
+					font-size: 0.9em;
+				}
 
-					&:last-child {
-						margin: 0;
+				&:hover {
+					left: 0;
+				}
+
+				&.next {
+					left: auto;
+					right: -10.5em;
+					padding-right: 1em;
+					padding-left: 0;
+
+					&:hover {
+						left: auto;
+						right: 0;
 					}
 
-					a {
-						float: none;
-						@extend %button;
-						display: block;
-						border-radius: 0;
-						margin: 0;
+					i {
+						float: left;
+					}
+				}
+			}
+
+			i {
+				display: block;
+				float: right;
+				height: 100%;
+				width: 2.5em;
+				padding-top: 3em;
+				text-align: center;
+				font-size: 1.15em;
+				color: darken($bg-grey, 5%);
+
+				.next & {
+					float: left;
+				}
+			}
+
+			ul {
+				// font-size: 0;
+				text-align: center;
+				margin: 2em 0;
+				list-style: none;
+				padding: 0;
+				max-width: none;
+			}
+
+			li {
+				float: left;
+				width: 49.5%;
+				text-align: left;
+
+				&:last-child {
+					float: right;
+					text-align: right;
+				}
+
+				a {
+					@extend %button;
+					display: block;
+					float: none;
+					border-top: 0;
+					text-transform: none;
+					color: $dark-mid-grey;
+					text-align: left;
+					height: 6em;
+					padding-left: 0;
+
+					.chapter-num {
+						color: $magenta;
+					}
+
+					&.next {
+						text-align: right;
+						padding-left: 1em;
+						padding-right: 0;
+
+						i {
+							float: right;
+						}
+					}
+
+					i {
+						float: left;
+						padding-top: 1.5em;
+						height: 100%;
 					}
 				}
 			}
 		}
 
 		h2 {
-			margin-left: 1.5em;
+			@extend %sans;
 			font-weight: 600;
+			text-transform: uppercase;
+			font-size: 1.4em;
+			text-align: center;
+			margin-bottom: 0.75em;
 		}
 
 		h1 {
@@ -299,7 +471,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			max-width: 18em;
 			margin: 0 auto;
 			padding: 0 0.33em;
-			margin-bottom: 0.75em;
+			margin-bottom: 1.25em;
 		}
 
 		#main {
@@ -307,12 +479,62 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 		}
 
 		.toc {
-			position: fixed;
-			margin-left: 2.5em;
-			width: 20%;
+			// position: fixed;
+			margin: 0;
+			// width: 20%;
+			// top: 0;
+			// height: 100%;
+			background: lighten($sun-shadow, 1%);
+			display: none;
+			font-size: 0.9em;
+			line-height: 1.33em;
+			padding: 8.5em 0 6.5em;
+
+			a {
+				color: $text;
+				display: block;
+
+				&:hover {
+					background: lighten($grey-sunshine, 5%);
+				}
+
+				span {
+					@extend %sans;
+					color: $magenta;
+					font-size: 0.925em;
+					font-weight: 700;
+					margin-right: 0.75em;
+					text-transform: uppercase;
+				}
+			}
+
+			ol {
+				list-style: none;
+			}
+
+			& > ol > li {
+				border-bottom: 0.15em solid lighten($grey-sunshine, 5%);
+
+				& > a {
+					padding: 0.5em 1.25em;
+					border: 0;
+				}
+
+				&:hover {
+					border-color: $grey-sunshine;
+				}
+
+				li {
+					a { 
+						border: 0;
+						padding: 0.25em 0 0.25em 3em;
+					}
+				}
+			}
 
 			.active {
-				background-color: lighten($sunshine, 5%);
+				color: $magenta;
+				background-color: lighten($grey-sunshine, 5%);
 			}
 		}
 
@@ -338,6 +560,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				text-align: left;
 				margin: 1.15em 0 0.5em 0;
 				text-transform: none;
+				color: $magenta;
 			}
 
 			h3 {

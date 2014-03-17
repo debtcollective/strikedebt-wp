@@ -37,10 +37,6 @@
 		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
 		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-		 
-    		 
-    <script type="text/javascript" src="//use.typekit.net/gtd1tlr.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -48,6 +44,8 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="drom.css">
+
+	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/07013e4b76/UntitledProject1/style.css">
 	
 </head>
 
@@ -55,59 +53,81 @@
 
 <header>
 	<div class="wrapper">
-		<a href="/"><img src="_/title.png" alt="Strike Debt!" id="title" /></a>
+		<a href="" class="menu-trigger"><i class="icon-th-menu"></i>Menu</a>
+
+		<a href="/" id="project-of"><img src="_/title.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
 
 		<h3><a href="drom-front.html">The Debt Resisters&rsquo; Operations Manual</a></h3>
 	</div>
 
-	<nav class="chapters">
-		<ul>
-			<li><a href="drom-chapter.html">&larr; Previous chapter</a></li>
-			<li><a href="drom-front.html">See chapter index</a></li>
-			<li><a href="drom-chapter.html">Next Chapter &rarr;</a></li>
-		</ul>
+	<nav class="chapters" id="side">
+		<a href="drom-chapter.html" class="previous"><i class="icon-arrow-left"></i><span class="chapter-num">Chapter 1</span>Credit Scores and Consumer Reporting Agencies: Surveillance and the Vicious Cycle of Debt</a>
+		<a href="drom-chapter.html" class="next"><i class="icon-arrow-right"></i><span class="chapter-num">Chapter 12</span>Municipal and State Debt: Crushing Debt from Above</a>
 	</nav>
 </header>
+
+
+
+<aside class="toc" id="menu">
+	<ol>
+		<li><a href="drom-chapter.html">Introduction</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 1</span>Credit Scores and Consumer Reporting Agencies: Surveillance and the Vicious Cycle of Debt</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 2</span>Credit Card and Automobile Debt: On the Road to Nowhere</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 3</span>Medical Debt: America's Sick Creation</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 4</span>Student Debt: Foreclosing on the Future</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 5</span>Housing Debt: How the American Dream Became a Bait-and-Switch Nightmare</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 6</span>Tax Debt: The Certainty of Debt and Taxes</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 7</span>Fringe Finance Transaction Products and Services: Making Bank on the Unbanked</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 8</span>Fringe Finance Credit Products and Services: Credit for the Precariat</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 9</span>Debt Collection: Don't Feed the Vultures</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 10</span>Bankruptcy: It's Better Than Nothing</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 11</span>Strategies for Survival: Living on the Margins of the Debt System</a>
+			<ol>
+				<li><a href="#food" id="food_nav" class="active">Food</a></li>
+				<li><a href="#clothing" id="clothing_nav">Clothing</a></li>
+				<li><a href="#shelter" id="shelter_nav">Shelter</a>
+					<!-- <ol>
+						<li><a href="#apartment" id="apartment_nav">Renting an apartment with bad credit</a></li>
+						<li><a href="#housing" id="housing_nav">Collective housing</a></li>
+						<li><a href="#squatting" id="squatting_nav">Squatting</a></li>
+					</ol> -->
+				</li>
+				<li><a href="#health" id="health_nav">Health and Care</a><!-- 
+					<ol>
+						<li><a href="#free-clinics" id="free-clinics_nav">Free clinics</a></li>
+						<li><a href="#convenient-clinics" id="convenient-clinics_nav">Convenient care clinics</a></li>
+						<li><a href="#er" id="er_nav">Emergency room</a></li>
+						<li><a href="#medicaid" id="medicaid_nav">Medicaid</a></li>
+						<li><a href="#institutions" id="institutions_nav">Condition-specific institutions</a></li>
+						<li><a href="#dental" id="dental_nav">Dental and vision care</a></li>
+					</ol> -->
+				</li>
+				<li><a href="#schools" id="schools_nav">Free Schools</a></li>
+				<li><a href="#transportation" id="transportation_nav">Transportation</a></li>
+				<li><a href="#cash" id="cash_nav">Cash Money</a></li>
+				<li><a href="#microcredit" id="microcredit_nav">Microcredit</a></li>
+				<li><a href="#resources" id="resources_nav">Resources</a></li>
+				<li><a href="#websites" id="websites_nav">Websites</a></li>
+				<li><a href="#general" id="food_nav">General</a></li>
+				<li><a href="#res-food" id="food_nav">Food</a></li>
+				<li><a href="#res-shelter" id="food_nav">Shelter</a></li>
+				<li><a href="#res-health" id="food_nav">Health and care</a></li>
+				<li><a href="#references" id="food_nav">References</a></li>
+			</ol>
+		</li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 12</span>Municipal and State Debt: Crushing Debt from Above</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 13</span>National Debt: The Politics of Scarcity and Control</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 14</span>Climate Debt: An Overdue Balance</a></li>
+		<li><a href="drom-chapter.html"><span class="chapter-num">Chapter 15</span>Prospects for Change: Join the Resistance!</a></li>
+		<li><a href="drom-chapter.html">Glossary</a></li>
+	</ol>
+</aside>
 
 
 <section id="main">
 
 	<h2>Chapter Eleven</h2>
-	
 	<h1>Strategies for Survival: Living on the Margins of the Debt&nbsp;System</h1>
-
-	<aside class="toc">
-		<ol>
-			<li><a href="#food" id="food_nav">Food</a></li>
-			<li><a href="#clothing" id="clothing_nav">Clothing</a></li>
-			<li><a href="#shelter" id="shelter_nav">Shelter</a></li>
-				<ol>
-					<li><a href="#apartment" id="apartment_nav">Renting an apartment with bad credit</a></li>
-					<li><a href="#housing" id="housing_nav">Collective housing</a></li>
-					<li><a href="#squatting" id="squatting_nav">Squatting</a></li>
-				</ol>
-			<li><a href="#health" id="health_nav">Health and Care</a></li>
-				<ol>
-					<li><a href="#free-clinics" id="free-clinics_nav">Free clinics</a></li>
-					<li><a href="#convenient-clinics" id="convenient-clinics_nav">Convenient care clinics</a></li>
-					<li><a href="#er" id="er_nav">Emergency room</a></li>
-					<li><a href="#medicaid" id="medicaid_nav">Medicaid</a></li>
-					<li><a href="#institutions" id="institutions_nav">Condition-specific institutions</a></li>
-					<li><a href="#dental" id="dental_nav">Dental and vision care</a></li>
-				</ol>
-			<li><a href="#schools" id="schools_nav">Free Schools</a></li>
-			<li><a href="#transportation" id="transportation_nav">Transportation</a></li>
-			<li><a href="#cash" id="cash_nav">Cash Money</a></li>
-			<li><a href="#microcredit" id="microcredit_nav">Microcredit</a></li>
-			<li><a href="#resources" id="resources_nav">Resources</a></li>
-			<li><a href="#websites" id="websites_nav">Websites</a></li>
-			<li><a href="#general" id="food_nav">General</a></li>
-			<li><a href="#res-food" id="food_nav">Food</a></li>
-			<li><a href="#res-shelter" id="food_nav">Shelter</a></li>
-			<li><a href="#res-health" id="food_nav">Health and care</a></li>
-			<li><a href="#references" id="food_nav">References</a></li>
-		</ol>
-	</aside>
 
 	<article>
 
@@ -178,7 +198,7 @@
 		<h2 id="health">Health and Care</h2>
 
 
-		<p>Access to health care is a basic human right. Unfortunately for those who are uninsured and living off the financial grid, that access can be hard to come by, especially in rural areas. Taking care of your personal health by exercising, eating well, and washing your hands is important but for many is not enough. If you have a chronic condition or come down with a serious illness that requires medical care, there are some options that won't send you into crushing medical debt. If you're unable to avoid medical debt or already have it, see Chapter Three.</p>
+		<p>Access to health care is a basic human right. Unfortunately for those who are uninsured and living off the financial grid, that access can be hard to come by, especially in rural areas. Taking care of your personal health by exercising, eating well, and washing your hands is important but for many is not enough. If you have a chronic condition or come down with a serious illness that requires medical care, there are some options that won't send you into crushing medical debt. If you're unable to avoid medical debt or already have it, see Ch Three.</p>
 
 		<h3 id="free-clinics">Free clinics</h3>
 
@@ -268,15 +288,14 @@
 		<p>That is the optimistic view of microcredit programs that has driven their expansion around the world over the past few decades. However, internationally these kinds of programs typically go hand in hand with removing populations from sustainable, non-capitalist ways of living like subsistence farming, and perpetuate a harsh morality of debt. Microcredit programs can begin to resemble banks or worse, charging loan-shark interest rates, narrowing loan criteria, and imposing harsh discipline to ensure repayment. In fact, sometimes programs really are banks: for-profit schemes without any larger social mission.</p>
 
 		<p>Do some research, pay attention to the details, don't be seduced by empty rhetoric. Make sure you know about the organization making the loans. Microcredit may offer a valuable boost, but it won't work for long-term needs.</p>
-	</article>
 
-	<nav class="chapters">
-		<ul>
-			<li><a href="drom-chapter.html">&larr; Previous chapter</a></li>
-			<li><a href="drom-chapter.html">See chapter index</a></li>
-			<li><a href="drom-chapter.html">Next Chapter &rarr;</a></li>
-		</ul>
-	</nav>
+		<nav class="chapters">
+			<ul>
+				<!-- <li><a href="drom-chapter.html" class="previous"><i class="icon-arrow-left"></i><span class="chapter-num">Chapter 1</span>Credit Scores and Consumer Reporting Agencies: Surveillance and the Vicious Cycle of Debt</a></li> -->
+				<li><a href="drom-chapter.html" class="next"><i class="icon-arrow-right"></i><span class="chapter-num">Chapter 12</span>Municipal and State Debt: Crushing Debt from Above</a></li>
+			</ul>
+		</nav>
+	</article>
 
 	<article class="resources">
 		<h2 id="resources">Resources</h2>
@@ -351,7 +370,40 @@
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="_/js/jquery.jpanelmenu.min.js"></script>
 <script src="_/js/functions.js"></script>
+
+<script>
+
+vw = $(window).width();
+
+var jPM = $.jPanelMenu({
+	closeOnContentClick: false,
+	openPosition: "22%",
+	beforeOpen: function() {
+		$("nav.chapters > .previous").hide();
+		$(".menu-trigger").css("left", "22%");
+		$(".jPanelMenu-panel").css("width", "78%");
+	},
+	beforeClose: function() {
+		$("nav.chapters > .previous").show();
+		$(".menu-trigger").css("left", "");
+		$(".jPanelMenu-panel").css("width", "");
+	},
+});
+jPM.on();
+$("#menu").remove();
+
+// $(window).resize( function() {
+
+// 	vw = $(window).width();
+	
+// 	if (jPM.isOpen())
+// 		$(".jPanelMenu-panel").css("width", vw * 0.75);
+
+// });
+
+</script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

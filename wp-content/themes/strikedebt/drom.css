@@ -2,11 +2,11 @@
   font-family: "calluna", serif;
   font-weight: 600; }
 
-.drom header figure a, .drom.chapter nav.chapters ul li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .toc-list span, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter h2, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4 {
+.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4 {
   font-family: "calluna-sans", sans-serif;
   font-weight: 600; }
 
-.drom header figure a, .drom.chapter nav.chapters ul li a {
+.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a {
   display: inline-block;
   padding: 0.75em 1em;
   font-size: 0.95em;
@@ -18,7 +18,7 @@
   border-color: #e1d1b3;
   border-radius: 0.3em;
   line-height: normal; }
-  .drom header figure a:hover, .drom.chapter nav.chapters ul li a:hover {
+  .drom header figure a:hover, .drom.chapter nav.chapters#side a:hover, .drom.chapter nav.chapters li a:hover {
     background: #e1d1b3;
     border-color: #dac6a1; }
 
@@ -35,6 +35,23 @@
   font-size: 3.25em;
   font-weight: 300;
   margin: 0.24em 0.05em 0.1em -0.1em; }
+
+.drom.chapter nav.chapters#side a {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+/* The Magnificent Clearfix -- j.mp/bestclearfix */
+.drom.chapter nav.chapters:before, .drom.chapter nav.chapters:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.drom.chapter nav.chapters {
+  zoom: 1; }
+  .drom.chapter nav.chapters:after {
+    clear: both; }
 
 .drom {
   padding-top: 0;
@@ -74,6 +91,20 @@
   .drom h2 {
     font-size: 2.5em;
     margin-top: 0; }
+  .drom .menu-trigger {
+    position: fixed;
+    top: 1.25em;
+    left: 0;
+    margin-left: 1.5em;
+    font-size: 1.15em;
+    border: 0;
+    color: #b9aa8f;
+    text-transform: uppercase; }
+    .drom .menu-trigger i {
+      font-size: 1.2em;
+      vertical-align: text-bottom;
+      line-height: 1em;
+      margin-right: 0.34em; }
   .drom header {
     display: table;
     width: 100%; }
@@ -97,17 +128,17 @@
       line-height: 1.6em; }
   .drom #toc {
     text-align: center; }
+  .drom .chapter-num {
+    display: block;
+    color: #9e004f;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase; }
   .drom .toc-list {
     list-style: none;
     text-align: left; }
     .drom .toc-list:last-child li:last-child a {
       padding: 0.7em 1em; }
-    .drom .toc-list span {
-      display: block;
-      color: #9e004f;
-      font-size: 0.9em;
-      font-weight: 700;
-      text-transform: uppercase; }
     .drom .toc-list a {
       display: block;
       padding: 0.75em 1em;
@@ -122,65 +153,175 @@
     color: #9e004f;
     margin: -0.75em 0 2.5em; }
   .drom.chapter {
+    border: 0;
     background: #fdf9e0;
     color: #313539;
     font-weight: 400; }
-    .drom.chapter header .wrapper {
-      padding: 0.5em 1.25em 1.25em;
-      width: auto;
-      max-width: none; }
-    .drom.chapter header h3 {
-      font-size: 1.25em;
-      margin: 0;
-      margin-left: 5em;
-      max-width: none;
-      text-align: left;
-      color: #939ba3;
-      text-shadow: none; }
-    .drom.chapter header #title {
-      width: 75px;
-      left: 2em;
-      margin-left: 0; }
-    .drom.chapter h2 {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 1.5em;
-      text-align: left; }
+    .drom.chapter header {
+      margin-bottom: 2.5em; }
+      .drom.chapter header a {
+        color: #b9aa8f; }
+      .drom.chapter header .wrapper {
+        width: auto;
+        max-width: none;
+        margin-top: 0.9em; }
+      .drom.chapter header h3 {
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0.5em 0;
+        max-width: none;
+        text-align: center;
+        font-weight: 600;
+        text-shadow: none; }
+        .drom.chapter header h3 a {
+          border-width: 0.1em;
+          border-color: rgba(185, 170, 143, 0.5); }
+          .drom.chapter header h3 a:hover {
+            border-color: #b9aa8f; }
+      .drom.chapter header #project-of {
+        width: 12em;
+        border: 0;
+        line-height: normal;
+        position: absolute;
+        right: 2em;
+        text-align: right; }
+      .drom.chapter header #title {
+        position: static;
+        margin: 0;
+        margin-top: -1.33em;
+        margin-left: 0.75em;
+        left: auto;
+        top: -1em;
+        width: 80px;
+        float: right; }
+    .drom.chapter section {
+      border: 0; }
     .drom.chapter nav.chapters {
       position: static;
       background: none; }
+      .drom.chapter nav.chapters#side a {
+        position: fixed;
+        width: 13em;
+        top: 50%;
+        left: -10.5em;
+        height: 9em;
+        margin-top: -4.5em;
+        padding-right: 0;
+        font-size: 1.05em;
+        text-transform: none;
+        color: #606870;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        .drom.chapter nav.chapters#side a .chapter-num {
+          margin-bottom: 0.5em;
+          font-size: 0.9em; }
+        .drom.chapter nav.chapters#side a:hover {
+          left: 0; }
+        .drom.chapter nav.chapters#side a.next {
+          left: auto;
+          right: -10.5em;
+          padding-right: 1em;
+          padding-left: 0; }
+          .drom.chapter nav.chapters#side a.next:hover {
+            left: auto;
+            right: 0; }
+          .drom.chapter nav.chapters#side a.next i {
+            float: left; }
+      .drom.chapter nav.chapters i {
+        display: block;
+        float: right;
+        height: 100%;
+        width: 2.5em;
+        padding-top: 3em;
+        text-align: center;
+        font-size: 1.15em;
+        color: #b09f7f; }
+        .next .drom.chapter nav.chapters i {
+          float: left; }
       .drom.chapter nav.chapters ul {
-        max-width: none;
-        font-size: 0.1px; }
-        .drom.chapter nav.chapters ul li {
-          font-size: 16px;
-          width: 33.133%;
-          margin-right: 0.2%;
-          display: inline-block; }
-          .drom.chapter nav.chapters ul li:last-child {
-            margin: 0; }
-          .drom.chapter nav.chapters ul li a {
-            float: none;
-            display: block;
-            border-radius: 0;
-            margin: 0; }
+        text-align: center;
+        margin: 2em 0;
+        list-style: none;
+        padding: 0;
+        max-width: none; }
+      .drom.chapter nav.chapters li {
+        float: left;
+        width: 49.5%;
+        text-align: left; }
+        .drom.chapter nav.chapters li:last-child {
+          float: right;
+          text-align: right; }
+        .drom.chapter nav.chapters li a {
+          display: block;
+          float: none;
+          border-top: 0;
+          text-transform: none;
+          color: #606870;
+          text-align: left;
+          height: 6em;
+          padding-left: 0; }
+          .drom.chapter nav.chapters li a .chapter-num {
+            color: #9e004f; }
+          .drom.chapter nav.chapters li a.next {
+            text-align: right;
+            padding-left: 1em;
+            padding-right: 0; }
+            .drom.chapter nav.chapters li a.next i {
+              float: right; }
+          .drom.chapter nav.chapters li a i {
+            float: left;
+            padding-top: 1.5em;
+            height: 100%; }
     .drom.chapter h2 {
-      margin-left: 1.5em;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      text-align: center;
+      margin-bottom: 0.75em; }
     .drom.chapter h1 {
       font-size: 2.75em;
       max-width: 18em;
       margin: 0 auto;
       padding: 0 0.33em;
-      margin-bottom: 0.75em; }
+      margin-bottom: 1.25em; }
     .drom.chapter #main {
       padding-top: 1em; }
     .drom.chapter .toc {
-      position: fixed;
-      margin-left: 2.5em;
-      width: 20%; }
+      margin: 0;
+      background: #eadec9;
+      display: none;
+      font-size: 0.9em;
+      line-height: 1.33em;
+      padding: 8.5em 0 6.5em; }
+      .drom.chapter .toc a {
+        color: #313539;
+        display: block; }
+        .drom.chapter .toc a:hover {
+          background: #e1d1b3; }
+        .drom.chapter .toc a span {
+          color: #9e004f;
+          font-size: 0.925em;
+          font-weight: 700;
+          margin-right: 0.75em;
+          text-transform: uppercase; }
+      .drom.chapter .toc ol {
+        list-style: none; }
+      .drom.chapter .toc > ol > li {
+        border-bottom: 0.15em solid #e1d1b3; }
+        .drom.chapter .toc > ol > li > a {
+          padding: 0.5em 1.25em;
+          border: 0; }
+        .drom.chapter .toc > ol > li:hover {
+          border-color: #dac6a1; }
+        .drom.chapter .toc > ol > li li a {
+          border: 0;
+          padding: 0.25em 0 0.25em 3em; }
       .drom.chapter .toc .active {
-        background-color: #ffe2aa; }
+        color: #9e004f;
+        background-color: #e1d1b3; }
     .drom.chapter article {
       max-width: 40em;
       margin-bottom: 3em; }
@@ -192,7 +333,8 @@
         text-shadow: none;
         text-align: left;
         margin: 1.15em 0 0.5em 0;
-        text-transform: none; }
+        text-transform: none;
+        color: #9e004f; }
       .drom.chapter article h3 {
         font-size: 1.25em;
         font-weight: 600; }
