@@ -277,7 +277,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 		header {
 			// background: $sun-shadow;
-			margin-bottom: 2.5em;
+			margin-bottom: 1em;
 
 			a {
 				color: $bg-grey;
@@ -292,7 +292,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			h3 {
 				font-size: 1.25em;
 				margin: 0;
-				padding: 0.5em 0;
+				padding-top: 3em;
 				max-width: none;
 				text-align: center;
 				@extend %sans;
@@ -345,6 +345,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			background: none;
 			@extend %sans;
 			@extend %clearfix;
+			display: none;
 
 			// next/previous
 			&#side a {
@@ -414,14 +415,6 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			}
 
 			li {
-				float: left;
-				width: 49.5%;
-				text-align: left;
-
-				&:last-child {
-					float: right;
-					text-align: right;
-				}
 
 				a {
 					@extend %button;
@@ -467,7 +460,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 		}
 
 		h1 {
-			font-size: 2.75em;
+			font-size: 2em;
 			max-width: 18em;
 			margin: 0 auto;
 			padding: 0 0.33em;
@@ -591,13 +584,17 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				line-height: 1.65em;
 				max-width: 46.5em;
 			}
+
+			.chapters {
+				display: block;
+			}
 		}
 	}
 }
 
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 720px) {
 
 	.drom {
 
@@ -624,6 +621,38 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 			&:nth-of-type(even) {
 				margin-left: 5%;
+			}
+		}
+
+		&.chapter {
+
+			header {
+				margin-bottom: 2.5em;
+			}
+
+			nav.chapters {
+				display: block;
+			}
+
+			header h3 {
+				padding: 0.5em 0;
+			}
+
+			h1 {
+				font-size: 2.75em;
+			}
+
+			article {
+				.chapters li {
+					float: left;
+					width: 49.5%;
+					text-align: left;
+
+					&:last-child {
+						float: right;
+						text-align: right;
+					}
+				}
 			}
 		}
 

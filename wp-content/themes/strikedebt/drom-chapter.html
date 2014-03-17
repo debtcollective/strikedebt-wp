@@ -377,20 +377,35 @@
 
 vw = $(window).width();
 
-var jPM = $.jPanelMenu({
-	closeOnContentClick: false,
-	openPosition: "22%",
-	beforeOpen: function() {
-		$("nav.chapters > .previous").hide();
-		$(".menu-trigger").css("left", "22%");
-		$(".jPanelMenu-panel").css("width", "78%");
-	},
-	beforeClose: function() {
-		$("nav.chapters > .previous").show();
-		$(".menu-trigger").css("left", "");
-		$(".jPanelMenu-panel").css("width", "");
-	},
-});
+if (vw >= 1024) {
+	var jPM = $.jPanelMenu({
+		closeOnContentClick: false,
+		openPosition: "22%",
+		beforeOpen: function() {
+			$("nav.chapters > .previous").hide();
+			$(".menu-trigger").css("left", "22%");
+			$(".jPanelMenu-panel").css("width", "78%");
+		},
+		beforeClose: function() {
+			$("nav.chapters > .previous").show();
+			$(".menu-trigger").css("left", "");
+			$(".jPanelMenu-panel").css("width", "");
+		},
+	});
+}
+else {
+	var jPM = $.jPanelMenu({
+		beforeOpen: function() {
+			$("nav.chapters > .previous").hide();
+			$(".menu-trigger").css("left", 250);
+		},
+		beforeClose: function() {
+			$("nav.chapters > .previous").show();
+			$(".menu-trigger").css("left", "");
+		},
+	});
+}
+
 jPM.on();
 $("#menu").remove();
 
