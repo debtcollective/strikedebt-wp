@@ -161,8 +161,8 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 		position: fixed;
 		top: 1.25em;
 		left: 0;
-		margin-left: 1.5em;
-		font-size: 1.15em;
+		margin-left: 1.25em;
+		font-size: 1.25em;
 		border: 0;
 		color: $bg-grey;
 		@extend %sans;
@@ -281,6 +281,10 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 			a {
 				color: $bg-grey;
+
+				&:hover {
+					color: darken($bg-grey, 15%);
+				}
 			}
 
 			.wrapper {
@@ -296,13 +300,15 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				max-width: none;
 				text-align: center;
 				@extend %sans;
-				font-weight: 600;
+				// font-weight: 700;
+				// text-transform: uppercase;
 				text-shadow: none;
 
 				a {
 					// color: $dark-mid-grey;
 					border-width: 0.1em;
 					border-color: rgba($bg-grey, 0.5);
+					border: 0;
 
 					&:hover {
 						border-color: $bg-grey;
@@ -649,7 +655,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			}
 
 			header h3 {
-				padding: 0.5em 0;
+				padding: 0.65em 0;
 			}
 
 			h1 {
