@@ -248,6 +248,8 @@
         list-style: none;
         padding: 0;
         max-width: none; }
+      .drom.chapter nav.chapters li:before {
+        display: none; }
       .drom.chapter nav.chapters li a {
         display: block;
         float: none;
@@ -337,9 +339,14 @@
         font-weight: 300;
         color: #313539; }
       .drom.chapter article ul {
-        list-style: square;
         margin: 1.25em 0;
         margin-left: 2em; }
+        .drom.chapter article ul li:before {
+          content: '\25a0';
+          color: #9e004f;
+          padding-right: 0.5em; }
+        .drom.chapter article ul li {
+          text-indent: -1em; }
       .drom.chapter article p {
         margin-bottom: 0;
         text-indent: 2em; }

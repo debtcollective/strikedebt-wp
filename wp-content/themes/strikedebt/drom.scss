@@ -416,6 +416,10 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 			li {
 
+				&:before {
+					display: none;
+				}
+
 				a {
 					@extend %button;
 					display: block;
@@ -568,9 +572,19 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			}
 
 			ul {
-				list-style: square;
+				// list-style: square;
 				margin: 1.25em 0;
 				margin-left: 2em;
+
+				li:before {
+					content: '\25a0';
+					color: $magenta;
+					padding-right: 0.5em;
+				}
+
+				li {
+					text-indent: -1em;
+				}
 			}
 
 			p {
