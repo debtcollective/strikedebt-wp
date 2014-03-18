@@ -1,4 +1,7 @@
 <?php
+
+
+	//wp_enqueue_script('jquery');
         // Translations can be filed in the /languages/ directory
         load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
  

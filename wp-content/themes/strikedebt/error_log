@@ -27,3 +27,11 @@
 [09-Sep-2013 10:59:26] PHP Fatal error:  Call to undefined function  get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
 [09-Sep-2013 11:01:38] PHP Fatal error:  Call to undefined function  get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
 [09-Sep-2013 11:01:39] PHP Fatal error:  Call to undefined function  get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[27-Feb-2014 19:33:37 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[27-Feb-2014 19:33:38 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[27-Feb-2014 19:33:43 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[27-Feb-2014 19:33:43 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[05-Mar-2014 22:07:56 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[05-Mar-2014 22:07:56 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[05-Mar-2014 22:07:59 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
+[05-Mar-2014 22:07:59 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home3/refusest/public_html/strikedebt/wp-content/themes/strikedebt/index.php on line 1
