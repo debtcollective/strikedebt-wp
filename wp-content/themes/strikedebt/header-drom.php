@@ -110,7 +110,7 @@
 	<div class="wrapper">
 		<a href="" class="menu-trigger"><i class="icon-th-menu"></i>Menu</a>
 
-		<a href="/" id="project-of"><img src="_/drom_square.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
+		<a href="/" id="project-of"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
 
 		<h3><a href="drom-front.html">The Debt Resisters&rsquo; Operations Manual</a></h3>
 	</div>

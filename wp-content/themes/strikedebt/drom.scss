@@ -151,6 +151,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 	h3, h4 {
 		color: $magenta;
+		line-height: normal;
 	}
 
 	h2 {
@@ -610,9 +611,38 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				padding: 1em 1.33em;
 				margin: 1em 0;
 				@extend %sans;
-				font-size: 0.95em;
-				line-height: 1.4em;
 				color: $dark-mid-grey;
+				line-height: 1.45em;
+
+				ol, ul {
+					margin-left: 1.5em;
+
+					li {
+						margin: 0.5em 0;
+					}
+				}
+
+				ol, ul, p {
+					@extend %hyphenate;
+				}
+			}
+
+			blockquote {
+				background: none;
+				border-color: $sun-shadow;
+				margin: 1.25em 0;
+				padding: 0;
+				padding-left: 1.25em;
+				font-size: 0.95em;
+				line-height: 1.6em;
+
+				p:first-of-type::first-letter {
+					display: inherit;
+					color: inherit;
+					font: inherit;
+					margin: 0;
+					float: none;
+				}
 			}
 
 			&.resources {
@@ -689,6 +719,10 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 						text-align: right;
 					}
 				}
+
+				blockquote {
+					margin-left: 2em;
+				}
 			}
 		}
 
@@ -706,8 +740,9 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			aside {
 				float: right;
 				width: 50%;
-				margin: 0.5em -21% 0.5em 4%;
+				margin: 0.5em -21% 1em 4%;
 				padding: 1.25em 1.5em;
+				font-size: 0.95em;
 			}
 		}
 	}
@@ -740,6 +775,10 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				font-size: 0.885em;
 				line-height: 1.65em;
 			}
+
+			blockquote {
+				margin-left: 2.5em;
+			}
 		}
 	}
 
@@ -758,7 +797,6 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				width: 62%;
 				margin-left: 4%;
 				margin-right: -33%;
-				line-height: 1.5em;
 			}
 		}
 	}

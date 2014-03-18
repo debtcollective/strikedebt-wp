@@ -36,7 +36,7 @@
   font-weight: 300;
   margin: 0.24em 0.05em 0.1em -0.1em; }
 
-.drom.chapter nav.chapters#side a {
+.drom.chapter nav.chapters#side a, .drom.chapter article aside ol, .drom.chapter article aside ul, .drom.chapter article aside p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto; }
@@ -88,7 +88,8 @@
     text-shadow: none;
     letter-spacing: 0; }
   .drom h3, .drom h4 {
-    color: #9e004f; }
+    color: #9e004f;
+    line-height: normal; }
   .drom h2 {
     font-size: 2.5em;
     margin-top: 0; }
@@ -362,9 +363,26 @@
         background: #e8dcc6;
         padding: 1em 1.33em;
         margin: 1em 0;
+        color: #606870;
+        line-height: 1.45em; }
+        .drom.chapter article aside ol, .drom.chapter article aside ul {
+          margin-left: 1.5em; }
+          .drom.chapter article aside ol li, .drom.chapter article aside ul li {
+            margin: 0.5em 0; }
+      .drom.chapter article blockquote {
+        background: none;
+        border-color: #e8dcc6;
+        margin: 1.25em 0;
+        padding: 0;
+        padding-left: 1.25em;
         font-size: 0.95em;
-        line-height: 1.4em;
-        color: #606870; }
+        line-height: 1.6em; }
+        .drom.chapter article blockquote p:first-of-type::first-letter {
+          display: inherit;
+          color: inherit;
+          font: inherit;
+          margin: 0;
+          float: none; }
       .drom.chapter article.resources {
         font-size: 0.85em;
         line-height: 1.65em;
@@ -401,13 +419,16 @@
     text-align: left; }
     .drom.chapter article .chapters li:last-child {
       float: right;
-      text-align: right; } }
+      text-align: right; }
+  .drom.chapter article blockquote {
+    margin-left: 2em; } }
 @media only screen and (min-width: 960px) {
   .drom.chapter article aside {
     float: right;
     width: 50%;
-    margin: 0.5em -21% 0.5em 4%;
-    padding: 1.25em 1.5em; } }
+    margin: 0.5em -21% 1em 4%;
+    padding: 1.25em 1.5em;
+    font-size: 0.95em; } }
 @media only screen and (min-width: 1040px) {
   .drom.chapter h1 {
     font-size: 3em; }
@@ -420,11 +441,12 @@
       margin-left: 2.5em; }
     .drom.chapter article.resources {
       font-size: 0.885em;
-      line-height: 1.65em; } }
+      line-height: 1.65em; }
+    .drom.chapter article blockquote {
+      margin-left: 2.5em; } }
 @media only screen and (min-width: 1200px) {
   .drom.chapter article aside {
     float: right;
     width: 62%;
     margin-left: 4%;
-    margin-right: -33%;
-    line-height: 1.5em; } }
+    margin-right: -33%; } }
