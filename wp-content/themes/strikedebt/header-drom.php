@@ -85,16 +85,13 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 		 
     		 
-    <script type="text/javascript" src="//use.typekit.net/gtd1tlr.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom.css">
 	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/54c54b72be/StrikeDebteDROM/style.css">
-	
-	
-	<link href="//cloud.webtype.com/css/42090266-3b94-4e5a-a108-e3325ddef577.css" rel="stylesheet" type="text/css" />
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
@@ -107,7 +104,7 @@
 	
 </head>
 
-<body <?php body_class('chapter drom'); ?>">
+<body <?php body_class('chapter drom'); ?>>
 
 <header>
 	<div class="wrapper">
