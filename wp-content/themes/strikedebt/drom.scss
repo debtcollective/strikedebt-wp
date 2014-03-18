@@ -3,7 +3,6 @@ $dark-grey: 	#313539; // blueish
 // $dark-grey:	#28313a; // more saturated
 $dark-mid-grey: lighten($dark-grey, 20%);
 $mid-grey:		lighten($dark-grey, 40%);
-$almost-white:	lighten($dark-grey, 60%);
 $warm-grey:		#9f9b8e;
 // $dark-grey: #3f3a49; // purpleish
 
@@ -16,6 +15,7 @@ $sun-shadow:	lighten($grey-sunshine, 10%);
 $light-sunshine:#fdf9e0;
 $linkblue:		#3d72a6;
 $bg-grey:		desaturate(darken($grey-sunshine, 10%), 20%);
+$almost-white:	lighten($light-sunshine, 5%);
 
 $text:			$dark-grey;
 $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
@@ -119,6 +119,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 	a {
 		border-bottom: 0.15em solid lighten($linkblue, 45%);
+		border-color: rgba(lighten($linkblue, 20%), 0.33);
 		color: $linkblue;
 
 		&:hover {
@@ -356,11 +357,12 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			// next/previous
 			&#side a {
 				position: fixed;
-				width: 13em;
+				width: 13.25em;
 				top: 50%;
 				left: -10.5em;
 				height: 9em;
 				margin-top: -4.5em;
+				padding-left: 1.25em;
 				padding-right: 0;
 				@extend %button;
 				// @extend %serif;
@@ -369,6 +371,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				color: $dark-mid-grey;
 				@extend %hyphenate;
 				@include transition(all, 0.4s);
+				overflow: hidden;
 
 				.chapter-num {
 					margin-bottom: 0.5em;
@@ -376,18 +379,18 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				}
 
 				&:hover {
-					left: 0;
+					left: -0.25em;
 				}
 
 				&.next {
 					left: auto;
 					right: -10.5em;
-					padding-right: 1em;
+					padding-right: 1.25em;
 					padding-left: 0;
 
 					&:hover {
 						left: auto;
-						right: 0;
+						right: -0.25em;
 					}
 
 					i {
@@ -599,6 +602,19 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 			}
 
+			aside {
+				float: none;
+				width: auto;
+				background: $almost-white;
+				background: $sun-shadow;
+				padding: 1em 1.33em;
+				margin: 1em 0;
+				@extend %sans;
+				font-size: 0.95em;
+				line-height: 1.4em;
+				color: $dark-mid-grey;
+			}
+
 			&.resources {
 				font-size: 0.85em;
 				line-height: 1.65em;
@@ -682,6 +698,24 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 
 
+@media only screen and (min-width: 960px) {
+
+	.drom.chapter {
+
+		article {
+			aside {
+				float: right;
+				width: 50%;
+				margin: 0.5em -21% 0.5em 4%;
+				padding: 1.25em 1.5em;
+			}
+		}
+	}
+
+}
+
+
+
 @media only screen and (min-width: 1040px) {
 
 	.drom.chapter {
@@ -705,6 +739,26 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			&.resources {
 				font-size: 0.885em;
 				line-height: 1.65em;
+			}
+		}
+	}
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+
+	.drom.chapter {
+
+		article {
+			aside {
+				float: right;
+				width: 62%;
+				margin-left: 4%;
+				margin-right: -33%;
+				line-height: 1.5em;
 			}
 		}
 	}

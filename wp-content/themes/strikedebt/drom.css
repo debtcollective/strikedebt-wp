@@ -2,7 +2,7 @@
   font-family: "calluna", serif;
   font-weight: 600; }
 
-.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4 {
+.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article aside {
   font-family: "calluna-sans", sans-serif;
   font-weight: 600; }
 
@@ -68,6 +68,7 @@
     padding: 2.5em 0; }
   .drom a {
     border-bottom: 0.15em solid #d8e4f1;
+    border-color: rgba(123, 165, 206, 0.33);
     color: #3d72a6; }
     .drom a:hover {
       background: none;
@@ -204,11 +205,12 @@
       display: none; }
       .drom.chapter nav.chapters#side a {
         position: fixed;
-        width: 13em;
+        width: 13.25em;
         top: 50%;
         left: -10.5em;
         height: 9em;
         margin-top: -4.5em;
+        padding-left: 1.25em;
         padding-right: 0;
         font-size: 1.05em;
         text-transform: none;
@@ -217,20 +219,21 @@
         -moz-transition: all 0.4s ease;
         -ms-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
-        transition: all 0.4s ease; }
+        transition: all 0.4s ease;
+        overflow: hidden; }
         .drom.chapter nav.chapters#side a .chapter-num {
           margin-bottom: 0.5em;
           font-size: 0.9em; }
         .drom.chapter nav.chapters#side a:hover {
-          left: 0; }
+          left: -0.25em; }
         .drom.chapter nav.chapters#side a.next {
           left: auto;
           right: -10.5em;
-          padding-right: 1em;
+          padding-right: 1.25em;
           padding-left: 0; }
           .drom.chapter nav.chapters#side a.next:hover {
             left: auto;
-            right: 0; }
+            right: -0.25em; }
           .drom.chapter nav.chapters#side a.next i {
             float: left; }
       .drom.chapter nav.chapters i {
@@ -352,6 +355,16 @@
       .drom.chapter article p {
         margin-bottom: 0;
         text-indent: 2em; }
+      .drom.chapter article aside {
+        float: none;
+        width: auto;
+        background: #fffef8;
+        background: #e8dcc6;
+        padding: 1em 1.33em;
+        margin: 1em 0;
+        font-size: 0.95em;
+        line-height: 1.4em;
+        color: #606870; }
       .drom.chapter article.resources {
         font-size: 0.85em;
         line-height: 1.65em;
@@ -389,6 +402,12 @@
     .drom.chapter article .chapters li:last-child {
       float: right;
       text-align: right; } }
+@media only screen and (min-width: 960px) {
+  .drom.chapter article aside {
+    float: right;
+    width: 50%;
+    margin: 0.5em -21% 0.5em 4%;
+    padding: 1.25em 1.5em; } }
 @media only screen and (min-width: 1040px) {
   .drom.chapter h1 {
     font-size: 3em; }
@@ -402,3 +421,10 @@
     .drom.chapter article.resources {
       font-size: 0.885em;
       line-height: 1.65em; } }
+@media only screen and (min-width: 1200px) {
+  .drom.chapter article aside {
+    float: right;
+    width: 62%;
+    margin-left: 4%;
+    margin-right: -33%;
+    line-height: 1.5em; } }
