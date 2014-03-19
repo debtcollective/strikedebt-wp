@@ -336,7 +336,8 @@
         text-align: left;
         margin: 1.15em 0 0.5em 0;
         text-transform: none;
-        color: #9e004f; }
+        color: #9e004f;
+        clear: both; }
       .drom.chapter article h3 {
         font-size: 1.25em;
         font-weight: 600; }
@@ -377,12 +378,12 @@
         padding-left: 1.25em;
         font-size: 0.95em;
         line-height: 1.6em; }
-        .drom.chapter article blockquote p:first-of-type::first-letter {
-          display: inherit;
-          color: inherit;
-          font: inherit;
-          margin: 0;
-          float: none; }
+      .drom.chapter article blockquote p:first-of-type::first-letter, .drom.chapter article aside p:first-of-type::first-letter {
+        display: inherit;
+        color: inherit;
+        font: inherit;
+        margin: 0;
+        float: none; }
       .drom.chapter article.resources {
         font-size: 0.85em;
         line-height: 1.65em;

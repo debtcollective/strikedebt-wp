@@ -568,6 +568,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				margin: 1.15em 0 0.5em 0;
 				text-transform: none;
 				color: $magenta;
+				clear: both;
 			}
 
 			h3 {
@@ -635,7 +636,9 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				padding-left: 1.25em;
 				font-size: 0.95em;
 				line-height: 1.6em;
+			}
 
+			blockquote, aside {
 				p:first-of-type::first-letter {
 					display: inherit;
 					color: inherit;
