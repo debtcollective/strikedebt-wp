@@ -88,8 +88,10 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom-live.css">
-	
 	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/54c54b72be/StrikeDebteDROM/style.css">
+	
+	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -101,64 +103,17 @@
 	
 </head>
 
-<body <?php body_class('chapter drom'); ?>>
+<body <?php body_class('drom'); ?>>
 
-<header>
+<header><div class="head-wrap">
 	<div class="wrapper">
-		<!--<a href="" class="menu-trigger"><i class="icon-th-menu"></i>Menu</a>-->
 
-		<div class="menu-trigger"><i class="icon-th-menu"></i>Menu</div>
-		<a href="/" id="project-of"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
+		<a href="/"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /></a>
 
-		<h3><a href="strikedebt.org/drom">The Debt Resisters&rsquo; Operations Manual</a></h3>
+		<h1>The Debt Resisters&rsquo; Operations Manual</h1>
+
 	</div>
-	
-</header>
+</div></header>
 
-<div id="chapter-menu">
-<aside class="toc" id="menu">
-	
-	<?php 
-		$current_p_id = $wp_query->post->ID;
-		
-		$args = array(
-			'post_type' => 'drom',
-			'meta_key' => 'chapter-number',
-			'orderby' => 'meta_value_num',
-			'posts_per_page' => -1,
-			'order' => 'ASC'
-		);
-		$chapter_query = new WP_Query($args);
-		
-		if ( $chapter_query->have_posts() ) {
-		//echo "HEEEYYY";
-	    echo '<ol>';
-		while ( $chapter_query->have_posts() ) {
-			$chapter_query->the_post();
-			$p_id = get_the_ID();
-			$subtitle = get_post_meta( $p_id, 'drom_subtitle', true);
-			if (!$subtitle) {$subtitle = '';}
-			$chapter_href = get_permalink();
-			echo '<li><a href="' . $chapter_href . '"><span class="chapter-num">' . get_the_title() . '</span>' . $subtitle . '</a></li>';
-			
-			//get submenus
-			if ($current_p_id == $p_id){
-				echo '<div id="currentSubmenu"></div>';
-			}
-			
-			
-		}
-	        echo '</ol>';
-		} else {
-			// no posts found
-		}
-		
-		wp_reset_postdata();  
-		
-		?>
-		
-	
-</aside>
-</div>
 
 
