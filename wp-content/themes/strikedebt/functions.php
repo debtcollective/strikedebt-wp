@@ -103,8 +103,8 @@ function drom_register() {
 	    'show_in_nav_menus' => true,
 	    'query_var' => true,
 	    'rewrite' => array( 'slug' => 'drom', 'with_front' => false ),
-	    'capability_type' => 'post',
-	    'has_archive' => true, 
+	    'capability_type' => 'page',
+	    'has_archive' => false, 
 	    'hierarchical' => false,
 	    'menu_position' => 5,
 	    //'taxonomies' => array( 'project-type' ),
@@ -136,6 +136,221 @@ function customformatTinyMCE($init) {
 
 // Modify Tiny_MCE init
 add_filter('tiny_mce_before_init', 'customformatTinyMCE' );
+
+
+
+
+
+
+
+/* -- DROM meta boxes -- */
+
+//First, let's see if we're on the DROM Front Page template - if so, get meta boxes for reviews
+add_action('admin_init','my_meta_init');
+
+function my_meta_init() {
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+
+	// check for a template type
+	if ($template_file == 'page-dromfront.php') {
+		add_meta_box('sd_praise_meta', 'Praise for DROM', 'sd_praise_meta_setup', 'page', 'normal', 'high');
+	}
+}
+
+//now, let's add a meta box for the subtitle
+function sd_drom_custom_boxes(){
+	add_meta_box('sd_drom_subtitles', 'Visual Subtitles', 'sd_drom_subtitles_meta_box', 'drom', 'normal', 'high');
+}
+add_action('add_meta_boxes', 'sd_drom_custom_boxes');
+
+
+
+
+/* callbacks for each meta box */
+//subtitle meta boxes on DROM chapter pages
+function sd_drom_subtitles_meta_box($post) {
+	wp_nonce_field( 'sd_drom_subtitles_meta_box', 'sd_drom_subtitles_meta_box_nonce' );
+	
+	$post_meta = get_post_meta($post->ID);
+	?>
+	<table>
+		<tr>
+			<td>
+				<textarea rows='2' cols='180' id="drom_subtitle" name="drom_admin_subtitle" style="width:92%;float:left;"><?php echo $post_meta['drom_subtitle'][0];//esc_attr($post_meta['nm_artistry_notes'][0]); ?></textarea>
+			</td>
+		</tr>
+	</table>
+	
+	
+<?php
+	
+}
+
+//praise meta boxes on DROM archive page
+function sd_praise_meta_setup($post) {
+	wp_nonce_field( 'sd_praise_meta_setup', 'sd_praise_meta_box_nonce' );
+	
+	$post_meta = get_post_meta($post->ID);	
+	?>
+	<table>
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #1</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_1">Content #1: </label>
+				<br />	
+				<textarea rows='5' cols='80' id="sd_review_1" name="sd_admin_review_1" style="width:92%;float:left;"><?php echo $post_meta['sd_review_1'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_1">Author #1: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_1" name="sd_admin_author_1" style="width:92%;float:right;"><?php echo $post_meta['sd_author_1'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #2</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_2">Content #2: </label><br />	
+				<textarea rows='5' cols='80' id="sd_review_2" name="sd_admin_review_2" style="width:92%;float:left;"><?php echo $post_meta['sd_review_2'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_2">Author #2: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_2" name="sd_admin_author_2" style="width:92%;float:right;"><?php echo $post_meta['sd_author_2'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #3</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_3">Content #3: </label><br />	
+				<textarea rows='5' cols='80' id="sd_review_3" name="sd_admin_review_3" style="width:92%;float:left;"><?php echo $post_meta['sd_review_3'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_3">Author #3: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_3" name="sd_admin_author_3" style="width:92%;float:right;"><?php echo $post_meta['sd_author_3'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #4</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_4">Content #4: </label><br />	
+				<textarea rows='5' cols='80' id="sd_review_4" name="sd_admin_review_4" style="width:92%;float:left;"><?php echo $post_meta['sd_review_4'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_4">Author #4: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_4" name="sd_admin_author_4" style="width:92%;float:right;"><?php echo $post_meta['sd_author_4'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #5</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_1">Content #5: </label><br />	
+				<textarea rows='5' cols='80' id="sd_review_5" name="sd_admin_review_5" style="width:92%;float:left;"><?php echo $post_meta['sd_review_5'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_5">Author #5: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_5" name="sd_admin_author_5" style="width:92%;float:right;"><?php echo $post_meta['sd_author_5'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<h2 style="margin-top:0px;margin-bottom:0px">Review #6</h2>
+			<div style="float:left;width:65%;">
+				<label for="sd_review_6">Content #6: </label><br />	
+				<textarea rows='5' cols='80' id="sd_review_6" name="sd_admin_review_6" style="width:92%;float:left;"><?php echo $post_meta['sd_review_6'][0]; ?></textarea>
+			</div>
+			<div style="float:right;width:35%;">
+				<label for="sd_author_6">Author #6: </label><br />
+				<textarea rows='5' cols='80' id="sd_author_6" name="sd_admin_author_6" style="width:92%;float:right;"><?php echo $post_meta['sd_author_6'][0]; ?></textarea>
+			</div>
+			</td>
+		</tr>
+		
+	</table>
+	<?php
+}
+
+/* Save the meta boxes to postmeta*/
+function sd_save_subtitle_meta_boxes( $post_id ) {
+	/** verify this came from the our screen and with proper authorization, because save_post can be triggered at other times.   */
+
+	// Check if our nonce is set.
+	if ( ! isset( $_POST['sd_drom_subtitles_meta_box_nonce'] ) )
+		return $post_id;
+	
+	$nonce = $_POST['sd_drom_subtitles_meta_box_nonce'];
+
+	// Verify that the nonce is valid.
+	if ( ! wp_verify_nonce( $nonce, 'sd_drom_subtitles_meta_box' ) )
+		return $post_id;
+
+	$subtitle = sanitize_text_field( $_POST['drom_admin_subtitle'] );
+	update_post_meta( $post_id, 'drom_subtitle', $subtitle );
+	
+	
+}
+add_action( 'save_post', 'sd_save_subtitle_meta_boxes' );
+
+
+function sd_save_praise_meta_boxes( $post_id ) {
+	/** verify this came from the our screen and with proper authorization, because save_post can be triggered at other times.   */
+
+	// Check if our nonce is set.
+	if ( ! isset( $_POST['sd_praise_meta_box_nonce'] ) )
+		return $post_id;
+	
+	$nonce = $_POST['sd_praise_meta_box_nonce'];
+
+	// Verify that the nonce is valid.
+	if ( ! wp_verify_nonce( $nonce, 'sd_praise_meta_setup' ) )
+		return $post_id;
+
+	$review1 = sanitize_text_field( $_POST['sd_admin_review_1'] );
+	$author1 = sanitize_text_field( $_POST['sd_admin_author_1'] );
+	$review2 = sanitize_text_field( $_POST['sd_admin_review_2'] );
+	$author2 = sanitize_text_field( $_POST['sd_admin_author_2'] );
+	$review3 = sanitize_text_field( $_POST['sd_admin_review_3'] );
+	$author3 = sanitize_text_field( $_POST['sd_admin_author_3'] );
+	
+	$review4 = sanitize_text_field( $_POST['sd_admin_review_4'] );
+	$author4 = sanitize_text_field( $_POST['sd_admin_author_4'] );
+	$review5 = sanitize_text_field( $_POST['sd_admin_review_5'] );
+	$author5 = sanitize_text_field( $_POST['sd_admin_author_5'] );
+	$review6 = sanitize_text_field( $_POST['sd_admin_review_6'] );
+	$author6 = sanitize_text_field( $_POST['sd_admin_author_6'] );
+	
+	
+	update_post_meta( $post_id, 'sd_review_1', $review1 );
+	update_post_meta( $post_id, 'sd_author_1', $author1 );
+	update_post_meta( $post_id, 'sd_review_2', $review2 );
+	update_post_meta( $post_id, 'sd_author_2', $author2 );
+	update_post_meta( $post_id, 'sd_review_3', $review3 );
+	update_post_meta( $post_id, 'sd_author_3', $author3 );
+
+	update_post_meta( $post_id, 'sd_review_4', $review4 );
+	update_post_meta( $post_id, 'sd_author_4', $author4 );
+	update_post_meta( $post_id, 'sd_review_5', $review5 );
+	update_post_meta( $post_id, 'sd_author_5', $author5 );
+	update_post_meta( $post_id, 'sd_review_6', $review6 );
+	update_post_meta( $post_id, 'sd_author_6', $author6 );
+	
+	
+}
+add_action( 'save_post', 'sd_save_praise_meta_boxes' );
 
 
 
