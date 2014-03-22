@@ -1,10 +1,5 @@
 <footer id="main">
 		
-	<p style="font-size: 1.75em; margin: 0.5em 0; color: #606663;">&middot;</p>
-	
-	<p><small><em>Strike Debt is an offshoot of <a href="http://interoccupy.net">Occupy Wall Street</a></em></small></p>
-	
-	<p><small>Design by <a href="http://zakgreene.com/new">Zak Greene</a></small</p>
 	
 </footer>
 
@@ -26,8 +21,6 @@
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.-->
 	 
-<script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script>
 

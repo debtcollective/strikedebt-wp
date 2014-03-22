@@ -336,7 +336,8 @@
         text-align: left;
         margin: 1.15em 0 0.5em 0;
         text-transform: none;
-        color: #9e004f; }
+        color: #9e004f;
+        clear: both; }
       .drom.chapter article h3 {
         font-size: 1.25em;
         font-weight: 600; }

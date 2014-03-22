@@ -85,6 +85,9 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 		 
 	
+	<script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom-live.css">
@@ -110,7 +113,7 @@
 		<div class="menu-trigger"><i class="icon-th-menu"></i>Menu</div>
 		<a href="/" id="project-of"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
 
-		<h3><a href="strikedebt.org/drom">The Debt Resisters&rsquo; Operations Manual</a></h3>
+		<h3><a href="http://strikedebt.org/drom">The Debt Resisters&rsquo; Operations Manual</a></h3>
 	</div>
 	
 </header>

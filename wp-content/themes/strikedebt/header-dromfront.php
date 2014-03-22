@@ -85,6 +85,9 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 		 
 	
+	<script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom-live.css">
