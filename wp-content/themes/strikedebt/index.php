@@ -10,9 +10,9 @@
       <div id="drom2">
         <img src="<?php bloginfo('template_directory'); ?>/_/drom2_sm.png" alt="The Debt Resisters' Operations Manual" />
 
-        <div><h2>Coming Soon</h2>
+        <div><h2><a style="color:white;" href="<?php echo esc_url( home_url( '/' ) ); ?>drom">Available Now</a></h2>
           <h3>The Debt Resisters’ Operations Manual<br />
-          <em>Available in print and on the web</em></h3></div>
+          <em>Available in print and <a style="color:white;" href="<?php echo esc_url( home_url( '/' ) ); ?>drom">on the web</a></em></h3></div>
       </div>
 	</section>
 	
@@ -93,10 +93,10 @@ http://rollingjubilee.org/contribute#contribute
 	     
 	     <h4>The Debt Resistors' Operations Manual</h4>
 	     
-	     <p>This manual&mdash;written by an anonymous collective of resistors, defaulters, and allies from Strike Debt and Occupy Wall Street&mdash;aims to provide specific tactics for understanding and fighting against the debt system. You'll find detailed strategies and resources for dealing with credit card, medical, student, housing and municipal debt, tactics for navigating the pitfalls of personal bankruptcy, and information to help protect yourself from predatory lenders. Recognizing that individually we can only do so much to resist the system of debt, the manual also introduces ideas for those who have made the decision to take collective action.</p>
+	     <p>Written by a network of activists, writers, and academics from <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Strike Debt</a>, The Debt Resisters’ Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom">here</a> for free.</p>
         
-<em>The DROM was originally released on September 15, 2012, and will be available with updates and new chapters through Common Notions/PM Press in early 2014.</em>
-        <a href="The-Debt-Resistors-Operations-Manual.pdf" onClick="javascript: pageTracker._trackPageview('/downloads/DROM'); "><button>Download the Manual (PDF) &darr;</button></a>
+<!--<em>The DROM was originally released on September 15, 2012, and will be available with updates and new chapters through Common Notions/PM Press in early 2014.</em>
+        <a href="The-Debt-Resistors-Operations-Manual.pdf" onClick="javascript: pageTracker._trackPageview('/downloads/DROM'); "><button>Download the Manual (PDF) &darr;</button></a>-->
 	   </div>
 	   </article>
   </section>
