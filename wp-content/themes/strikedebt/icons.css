@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'drom';
-	src:url('_/fonts/drom.eot?-mo42sr');
-	src:url('_/fonts/drom.eot?#iefix-mo42sr') format('embedded-opentype'),
-		url('_/fonts/drom.woff?-mo42sr') format('woff'),
-		url('_/fonts/drom.ttf?-mo42sr') format('truetype'),
-		url('_/fonts/drom.svg?-mo42sr#drom') format('svg');
+	src:url('_/fonts/drom.eot?-2eldhb');
+	src:url('_/fonts/drom.eot?#iefix-2eldhb') format('embedded-opentype'),
+		url('_/fonts/drom.woff?-2eldhb') format('woff'),
+		url('_/fonts/drom.ttf?-2eldhb') format('truetype'),
+		url('_/fonts/drom.svg?-2eldhb#drom') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu-th:before {
+	content: "\e600";
+}
 .icon-arrow-right:before {
 	content: "\2192";
 }

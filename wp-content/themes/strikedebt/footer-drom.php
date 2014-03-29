@@ -11,8 +11,8 @@
 
 <!-- this is where we put our custom functions -->
 <script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.jpanelmenu.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/_/js/drom.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
 
 <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>

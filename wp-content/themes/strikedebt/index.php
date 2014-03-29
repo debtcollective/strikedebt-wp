@@ -8,7 +8,7 @@
       <p>Debt is a tie that binds the 99%. With stagnant wages, systemic unemployment, and public service cuts, we are forced to go into debt for the basic things in life &mdash; and thus surrender our futures to the banks. Debt is major source of profit and power for Wall Street that works to keep us isolated, ashamed, and afraid. Using direct action, research, education, and the arts, we are coming together to challenge this illegitimate system while imagining and creating alternatives. We want an economy in which our debts are to our friends, families, and communities &mdash; and not to the 1%.</p>
 
       <div id="drom2">
-        <img src="<?php bloginfo('template_directory'); ?>/_/drom2_sm.png" alt="The Debt Resisters' Operations Manual" />
+        <a style="color:white;" href="<?php echo esc_url( home_url( '/' ) ); ?>drom"><img src="<?php bloginfo('template_directory'); ?>/_/drom2_sm.png" alt="The Debt Resisters' Operations Manual" /></a>
 
         <div><h2><a style="color:white;" href="<?php echo esc_url( home_url( '/' ) ); ?>drom">Available Now</a></h2>
           <h3>The Debt Resisters’ Operations Manual<br />
@@ -93,7 +93,9 @@ http://rollingjubilee.org/contribute#contribute
 	     
 	     <h4>The Debt Resistors' Operations Manual</h4>
 	     
-	     <p>Written by a network of activists, writers, and academics from <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Strike Debt</a>, The Debt Resisters’ Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom">here</a> for free.</p>
+	     <p>Written by a network of activists, writers, and academics from <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Strike Debt</a>, The Debt Resisters’ Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom">for free.</a></p>
+	     
+	     <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom"><button>Read the Manual</button></a>
         
 <!--<em>The DROM was originally released on September 15, 2012, and will be available with updates and new chapters through Common Notions/PM Press in early 2014.</em>
         <a href="The-Debt-Resistors-Operations-Manual.pdf" onClick="javascript: pageTracker._trackPageview('/downloads/DROM'); "><button>Download the Manual (PDF) &darr;</button></a>-->
