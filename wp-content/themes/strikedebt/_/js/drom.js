@@ -20,8 +20,13 @@ jQuery(document).ready(function($) {
 			jQuery('aside#menu').css("width", "100%");
 			//jQuery()
 			jQuery("nav.chapters > .previous").hide();
-			jQuery('#chapter-menu').show("slow");
-			jQuery('#menu.toc').show('slide', {direction: 'left'});
+			
+			jQuery('#menu.toc').toggle('slide', {
+	            direction: 'left'
+	        }, 400, function(){ jQuery('#chapter-menu').fadeIn('fast');});
+	        
+			//jQuery('#chapter-menu').show("slow");
+			//jQuery('#menu.toc').show('slide', {direction: 'left'});
 			
 			
 			//console.log('false');
@@ -32,25 +37,44 @@ jQuery(document).ready(function($) {
 			jQuery(".drom-wrapper").css("width", "100%");
 			
 			jQuery("nav.chapters > .previous").show();
-			jQuery('#chapter-menu').hide("slow");
-			jQuery('#menu.toc').hide('slide', {direction: 'left'});
+			
+			
+			jQuery('#menu.toc').hide();
+			jQuery('#chapter-menu').hide();
+			/*jQuery('#menu.toc').fadeOut(function () {
+		        jQuery('#chapter-menu').toggle('slide', {
+		            direction: 'left'
+		        }, 200);
+			});*/
+			
+			//jQuery('#chapter-menu').hide("slow");
+			//jQuery('#menu.toc').hide('slide', {direction: 'left'});
 			
 		}
 		
 	});
 	
 	//gives us the anchors of our current page
-	var subitems = jQuery.find('.content h2 a');
+	/*var subitems = jQuery.find('.content a.submenu');
 	
 	var currentPage = window.location.hash;
-	/*var submenuText = '';
+	var currentNoHash = window.location.href.split('#')[0];
+	
+	var submenuID = '<ol>';
 	jQuery.each(subitems, function(key, value) {
-	
+		newHash = jQuery(this).attr('id');
+		newLink = currentNoHash + newHash;
 		
-		submenuText = submenuText + thisText;
-	});*/
+		//listStart = '<li><a href="' + newHash + '">' + 
+		
+		
+		submenuID = submenuID + thisText;
+	});
 	
-	jQuery('#currentSubmenu').html(subitems);
+	submenuID = submenuID + '</ol>';
+	
+	
+	jQuery('#currentSubmenu').html(subitems);*/
 	
 	
 	/*
@@ -87,15 +111,50 @@ jQuery(document).ready(function($) {
 	jQuery("#menu").remove();
 	*/
 	
-	//get all h2 a id anchors, put into list to insert into drom chapter menu
-	//var subitems = jQuery.find('.content h2 a');
-	/*var submenuText = '';
-	jQuery.each(subitems, function(key, value) {
-	
+	//get all h2 class=submenu, put into list to insert into drom chapter menu
+	var subitems = jQuery.find('.content h2.submenu');
+	var submenuID = '';
+	var currentPage = window.location.hash;
+	var currentNoHash = window.location.href.split('#')[0];
+	var submenuMarkup;
+	//iterate over each: get text, convert text to lowercase w slashes, insert id of prior to h2 tags, 
+	if (subitems.length > 0) { //if we HAVE submenu items
+		submenuMarkup = '<ol>';
+		jQuery.each(subitems, function() {
+			//get text
+			submenuID = jQuery(this).html();
+			
+			//title for sidemenu
+			submenuTitle = submenuID;
+			
+			//convert text to lower case w/ slashes
+			submenuID = submenuID.toLowerCase().replace(/ /g, '-');
+			
+			//add id tags to h2 elements
+			jQuery(this).attr('id', submenuID);
+			
+			//add list element to markup
+			submenuMarkup += '<li><a class="' + submenuID + '" href="' + currentNoHash + '#' + submenuID + '">' + submenuTitle + '</a></li>';
+			
+		});
+		submenuMarkup += '</ol>';
 		
-		submenuText = submenuText + thisText;
-	});*/
-	
+		
+		//find href of chapter-menu that == current href
+		var subitems = jQuery.find('#chapter-menu ol li a');
+		var chapterHref = '';
+		jQuery.each(subitems, function() {
+			//get chapter href
+			chapterHref = jQuery(this).attr('href');
+			//compare
+			if (chapterHref == currentNoHash) {		
+				//add markup here
+				jQuery(this).parent().append(submenuMarkup);
+			}
+			
+			
+		});
+	}
 	//jQuery('#currentSubmenu').html(subitems);
 	
 	

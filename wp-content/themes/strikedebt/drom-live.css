@@ -16,7 +16,7 @@
   font-family: "calluna", serif;
   font-weight: 600; }
 
-.drom #TopWrapper figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article aside {
+.drom #TopWrapper figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom #TopWrapper p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article aside {
 	font-family: "calluna-sans", sans-serif;
 	font-weight: 600; 
 }

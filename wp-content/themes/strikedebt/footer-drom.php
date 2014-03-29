@@ -1,10 +1,5 @@
 <footer id="main">
 		
-	<p style="font-size: 1.75em; margin: 0.5em 0; color: #606663;">&middot;</p>
-	
-	<p><small><em>Strike Debt is an offshoot of <a href="http://interoccupy.net">Occupy Wall Street</a></em></small></p>
-	
-	<p><small>Design by <a href="http://zakgreene.com/new">Zak Greene</a></small</p>
 	
 </footer>
 
@@ -16,8 +11,8 @@
 
 <!-- this is where we put our custom functions -->
 <script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.jpanelmenu.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/_/js/drom.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
 
 <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
@@ -26,8 +21,6 @@
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.-->
 	 
-<script type="text/javascript" src="//use.typekit.net/fkx3jxi.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script>
 
