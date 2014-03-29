@@ -67,22 +67,7 @@
 	     
 	     <h4>The Rolling Jubilee</h4>
 	     
-	     <p>We buy debt for pennies on the dollar, but instead of collecting it, we abolish it. We cannot buy specific individuals' debt&mdash;instead, we help liberate debtors at random through a campaign of mutual support, good will, and collective refusal. All proceeds go directly to buying people's debt and cancelling it.</p>
-
-<!--	     
-We kicked off this effort on November 15, 2012 with <em><a href="http://www.lepoissonrouge.com/lpr_events/peoples-bailout/">The People's Bailout</a></em>, a variety show and telethon in NYC. 
-
-	     <p>We <em><a href="http://strikedebt.org/n15/">celebrate one year of the Rolling Jubilee</a></em> on November 15, 2013, with an announcement about a VERY big debt purchase. Join us!</p>
-http://rollingjubilee.org/contribute#contribute
-        
-        <div id="paypal" style="float: none; margin: 0; padding: 0;">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="3PTZL6A86SXC8">
-            <button>Donate to the Rolling Jubilee Fund</button>
-          </form>
-        </div>
--->
+	     <p>We buy debt for pennies on the dollar, but instead of collecting it, we abolish it. We cannot buy specific individuals' debt &mdash; instead, we help liberate debtors at random through a campaign of mutual support, good will, and collective refusal. All proceeds go directly to buying and canceling people's debt.</p>
         
         <a href="http://rollingjubilee.org"><button>Visit the Rolling Jubilee Site</button></a>
         </div>
@@ -91,14 +76,11 @@ http://rollingjubilee.org/contribute#contribute
 	   <article class="clearfix" id="drom">
 	     <div>
 	     
-	     <h4>The Debt Resistors' Operations Manual</h4>
+	     <h4>The Debt Resisters&rsquo; Operations Manual</h4>
 	     
-	     <p>Written by a network of activists, writers, and academics from <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Strike Debt</a>, The Debt Resisters’ Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom">for free.</a></p>
-	     
+	     <p>Written by a network of activists, writers, and academics, The Debt Resisters&rsquo; Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available for free.</a>
+
 	     <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom"><button>Read the Manual</button></a>
-        
-<!--<em>The DROM was originally released on September 15, 2012, and will be available with updates and new chapters through Common Notions/PM Press in early 2014.</em>
-        <a href="The-Debt-Resistors-Operations-Manual.pdf" onClick="javascript: pageTracker._trackPageview('/downloads/DROM'); "><button>Download the Manual (PDF) &darr;</button></a>-->
 	   </div>
 	   </article>
   </section>
