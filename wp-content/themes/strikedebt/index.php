@@ -78,7 +78,7 @@
 	     
 	     <h4>The Debt Resisters&rsquo; Operations Manual</h4>
 	     
-	     <p>Written by a network of activists, writers, and academics, The Debt Resisters&rsquo; Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available for free.</a>
+	     <p>Written by a network of activists, writers, and academics, The Debt Resisters&rsquo; Operations Manual reveals how the predatory debt system works to increase inequality, undermine democracy, and ruin lives. It provides detailed strategies for fighting common forms of debt and lays out an expansive vision for a societal movement of debt resistance. The full text of the manual is available for free.</p>
 
 	     <a href="<?php echo esc_url( home_url( '/' ) ); ?>drom"><button>Read the Manual</button></a>
 	   </div>
