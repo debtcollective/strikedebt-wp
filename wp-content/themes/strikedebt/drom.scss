@@ -777,6 +777,16 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			}
 
 			article {
+
+				& > p:first-of-type {
+					font-size: 1em;
+					line-height: 1.5em;
+					color: #777;
+					background-color: rgba(225, 209, 179, 0.5);
+					padding: 1em 1.25em;
+					margin: 0 -1.25em 0.75em;
+				}
+
 				.chapters li {
 					float: left;
 					width: 49.5%;
@@ -808,11 +818,6 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 			& > p:first-of-type {
 				font-size: 1.1em;
-				line-height: 1.5em;
-				color: #777;
-				background-color: rgba(225, 209, 179, 0.5);
-				padding: 1em 1.25em;
-				margin: 0 -1.25em 0.75em;
 			}
 
 			aside {
