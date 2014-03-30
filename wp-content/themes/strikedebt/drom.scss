@@ -739,6 +739,17 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	.drom.chapter {
 
 		article {
+
+			p:first-of-type {
+				font-size: 1.1em;
+				line-height: 1.5em;
+				color: #777;
+				/* font-family: "calluna-sans"; */
+				background-color: rgba(225, 209, 179, 0.5);
+				padding: 1em 1.25em;
+				margin: 0 -1.25em 0.75em;
+			}
+
 			aside {
 				float: right;
 				width: 50%;
