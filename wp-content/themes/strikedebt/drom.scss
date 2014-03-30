@@ -73,7 +73,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 	color: $magenta;
 	font-size: 3.25em;
 	font-weight: 300;
-	margin: 0.24em 0.05em 0.1em -0.1em;
+	margin: 0.2em 0.05em 0.05em -0.1em;
 }
 
 %hyphenate {
@@ -161,20 +161,29 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 	.menu-trigger {
 		position: fixed;
-		top: 1.25em;
-		left: 0;
-		margin-left: 1.25em;
+		top: 0;
+		left: -0.5em;
+		padding: 0.5em;
+		padding-top: 1.05em;
+		margin-left: 0.85em;
 		font-size: 1.25em;
 		border: 0;
 		color: $bg-grey;
 		@extend %sans;
 		text-transform: uppercase;
+		cursor: pointer;
+		font-weight: 300;
+		background: $light-sunshine;
 
 		i {
-			font-size: 1.2em;
+			font-size: 0.8em;
 			vertical-align: text-bottom;
-			line-height: 1em;
+			line-height: 1.4em;
 			margin-right: 0.34em;
+		}
+
+		&:hover {
+			background: $light-sunshine;
 		}
 	}
 
@@ -581,19 +590,64 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				color: $dark-grey;
 			}
 
-			ul {
+			ul, ol {
 				// list-style: square;
 				margin: 1.25em 0;
 				margin-left: 2em;
 
-				li:before {
-					content: '\25a0';
-					color: $magenta;
-					padding-right: 0.5em;
+				& > li:before {
+					padding-right: 0.75em;
 				}
 
 				li {
-					text-indent: -1em;
+					text-indent: -1.25em;
+				}
+
+				ul {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
+			ul {
+
+				& > li:before {
+					content: '\25a0';
+					color: $magenta;
+				}
+
+			}
+
+			ol {
+				counter-reset: numbers;
+				list-style: none;
+
+				& > li:before {
+					content: counter(numbers);
+					counter-increment: numbers;
+					@extend %sans;
+					border: 2px solid $magenta;
+					display: inline-block;
+					border-radius: 1.25em;
+					margin: 0 0.75em 0 -0.15em;
+					padding: 0 0.5em 1.15em;
+					width: 0.45em;
+					height: 0.33em;
+					line-height: 1.33em;
+					text-align: right;
+					color: $magenta;
+					font-size: 0.9em;
+					font-weight: 700;
+				}
+
+				& > li {
+					margin-bottom: 0.5em;
+					text-indent: -2em;
+				}
+
+				ul {
+					margin-top: 0;
+					margin-bottom: 0;
 				}
 			}
 
@@ -615,10 +669,17 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				line-height: 1.45em;
 
 				ol, ul {
-					margin-left: 1.5em;
+					margin-left: 1em;
 
 					li {
-						margin: 0.5em 0;
+						margin: 0.75em 0;
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
 					}
 				}
 
@@ -670,6 +731,11 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 			.wrapper {
 				width: 700px;
 			}
+		}
+
+		.menu-trigger {
+			font-size: 1.5em;
+			margin-left: 1.25em;
 		}
 
 		.toc-list {
@@ -740,11 +806,10 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 
 		article {
 
-			p:first-of-type {
+			& > p:first-of-type {
 				font-size: 1.1em;
 				line-height: 1.5em;
 				color: #777;
-				/* font-family: "calluna-sans"; */
 				background-color: rgba(225, 209, 179, 0.5);
 				padding: 1em 1.25em;
 				margin: 0 -1.25em 0.75em;
@@ -780,7 +845,7 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				text-indent: 2.5em;
 			}
 
-			ul {
+			ul, ol {
 				margin-left: 2.5em;
 			}
 

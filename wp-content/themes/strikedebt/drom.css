@@ -2,7 +2,7 @@
   font-family: "calluna", serif;
   font-weight: 600; }
 
-.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article aside {
+.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article ol > li:before, .drom.chapter article aside {
   font-family: "calluna-sans", sans-serif;
   font-weight: 600; }
 
@@ -34,7 +34,7 @@
   color: #9e004f;
   font-size: 3.25em;
   font-weight: 300;
-  margin: 0.24em 0.05em 0.1em -0.1em; }
+  margin: 0.2em 0.05em 0.05em -0.1em; }
 
 .drom.chapter nav.chapters#side a, .drom.chapter article aside ol, .drom.chapter article aside ul, .drom.chapter article aside p {
   -webkit-hyphens: auto;
@@ -95,18 +95,25 @@
     margin-top: 0; }
   .drom .menu-trigger {
     position: fixed;
-    top: 1.25em;
-    left: 0;
-    margin-left: 1.25em;
+    top: 0;
+    left: -0.5em;
+    padding: 0.5em;
+    padding-top: 1.05em;
+    margin-left: 0.85em;
     font-size: 1.25em;
     border: 0;
     color: #b9aa8f;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    background: #fdf9e0; }
     .drom .menu-trigger i {
-      font-size: 1.2em;
+      font-size: 0.8em;
       vertical-align: text-bottom;
-      line-height: 1em;
+      line-height: 1.4em;
       margin-right: 0.34em; }
+    .drom .menu-trigger:hover {
+      background: #fdf9e0; }
   .drom header {
     display: table;
     width: 100%; }
@@ -344,15 +351,43 @@
         font-size: 1.25em;
         font-weight: 300;
         color: #313539; }
-      .drom.chapter article ul {
+      .drom.chapter article ul, .drom.chapter article ol {
         margin: 1.25em 0;
         margin-left: 2em; }
-        .drom.chapter article ul li:before {
-          content: '\25a0';
+        .drom.chapter article ul > li:before, .drom.chapter article ol > li:before {
+          padding-right: 0.75em; }
+        .drom.chapter article ul li, .drom.chapter article ol li {
+          text-indent: -1.25em; }
+        .drom.chapter article ul ul, .drom.chapter article ol ul {
+          margin-top: 0;
+          margin-bottom: 0; }
+      .drom.chapter article ul > li:before {
+        content: '\25a0';
+        color: #9e004f; }
+      .drom.chapter article ol {
+        counter-reset: numbers;
+        list-style: none; }
+        .drom.chapter article ol > li:before {
+          content: counter(numbers);
+          counter-increment: numbers;
+          border: 2px solid #9e004f;
+          display: inline-block;
+          border-radius: 1.25em;
+          margin: 0 0.75em 0 -0.15em;
+          padding: 0 0.5em 1.15em;
+          width: 0.45em;
+          height: 0.33em;
+          line-height: 1.33em;
+          text-align: right;
           color: #9e004f;
-          padding-right: 0.5em; }
-        .drom.chapter article ul li {
-          text-indent: -1em; }
+          font-size: 0.9em;
+          font-weight: 700; }
+        .drom.chapter article ol > li {
+          margin-bottom: 0.5em;
+          text-indent: -2em; }
+        .drom.chapter article ol ul {
+          margin-top: 0;
+          margin-bottom: 0; }
       .drom.chapter article p {
         margin-bottom: 0;
         text-indent: 2em; }
@@ -366,9 +401,13 @@
         color: #606870;
         line-height: 1.45em; }
         .drom.chapter article aside ol, .drom.chapter article aside ul {
-          margin-left: 1.5em; }
+          margin-left: 1em; }
           .drom.chapter article aside ol li, .drom.chapter article aside ul li {
-            margin: 0.5em 0; }
+            margin: 0.75em 0; }
+          .drom.chapter article aside ol:first-child, .drom.chapter article aside ul:first-child {
+            margin-top: 0; }
+          .drom.chapter article aside ol:last-child, .drom.chapter article aside ul:last-child {
+            margin-bottom: 0; }
       .drom.chapter article blockquote {
         background: none;
         border-color: #e8dcc6;
@@ -393,6 +432,9 @@
 @media only screen and (min-width: 720px) {
   .drom header .wrapper {
     width: 700px; }
+  .drom .menu-trigger {
+    font-size: 1.5em;
+    margin-left: 1.25em; }
   .drom .toc-list {
     width: 47%;
     display: inline-block;
@@ -423,11 +465,10 @@
   .drom.chapter article blockquote {
     margin-left: 2em; } }
 @media only screen and (min-width: 960px) {
-  .drom.chapter article p:first-of-type {
+  .drom.chapter article > p:first-of-type {
     font-size: 1.1em;
     line-height: 1.5em;
     color: #777;
-    /* font-family: "calluna-sans"; */
     background-color: rgba(225, 209, 179, 0.5);
     padding: 1em 1.25em;
     margin: 0 -1.25em 0.75em; }
@@ -445,7 +486,7 @@
     line-height: 1.6em; }
     .drom.chapter article p {
       text-indent: 2.5em; }
-    .drom.chapter article ul {
+    .drom.chapter article ul, .drom.chapter article ol {
       margin-left: 2.5em; }
     .drom.chapter article.resources {
       font-size: 0.885em;

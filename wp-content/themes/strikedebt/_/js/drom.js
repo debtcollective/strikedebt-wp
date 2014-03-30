@@ -5,64 +5,64 @@ jQuery(document).ready(function($) {
 	
 	*/
 	
-	jQuery('.menu-trigger').on('click', function (){
-		//e.preventDefault();
+	// $('.menu-trigger').on('click', function (){
+	// 	//e.preventDefault();
 		
-		//if not open, open
-		if ( jQuery('.menu-open-flag').data('triggered') == false ){
-			jQuery('.menu-open-flag').data('triggered', true);
+	// 	//if not open, open
+	// 	if ( $('.menu-open-flag').data('triggered') == false ){
+	// 		$('.menu-open-flag').data('triggered', true);
 			
 			
-			jQuery(".menu-trigger").css("left", "22%");
-			jQuery(".drom-wrapper").css("width", "78%");
-			jQuery(".drom-wrapper").css("float", "right");
-			jQuery('#chapter-menu').css("width", "22%");
-			jQuery('aside#menu').css("width", "100%");
-			//jQuery()
-			jQuery("nav.chapters > .previous").hide();
+	// 		$(".menu-trigger").css("left", "22%");
+	// 		$(".drom-wrapper").css("width", "78%");
+	// 		$(".drom-wrapper").css("float", "right");
+	// 		$('#chapter-menu').css("width", "22%");
+	// 		$('aside#menu').css("width", "100%");
+	// 		//$()
+	// 		$("nav.chapters > .previous").hide();
 			
-			jQuery('#menu.toc').toggle('slide', {
-	            direction: 'left'
-	        }, 400, function(){ jQuery('#chapter-menu').fadeIn('fast');});
+	// 		$('#menu.toc').toggle('slide', {
+	//             direction: 'left'
+	//         }, 400, function(){ $('#chapter-menu').fadeIn('fast');});
 	        
-			//jQuery('#chapter-menu').show("slow");
-			//jQuery('#menu.toc').show('slide', {direction: 'left'});
+	// 		//$('#chapter-menu').show("slow");
+	// 		//$('#menu.toc').show('slide', {direction: 'left'});
 			
 			
-			//console.log('false');
-		} else {
-			jQuery('.menu-open-flag').data('triggered', false);
+	// 		//console.log('false');
+	// 	} else {
+	// 		$('.menu-open-flag').data('triggered', false);
 			
-			jQuery(".menu-trigger").css("left", "");
-			jQuery(".drom-wrapper").css("width", "100%");
+	// 		$(".menu-trigger").css("left", "");
+	// 		$(".drom-wrapper").css("width", "100%");
 			
-			jQuery("nav.chapters > .previous").show();
+	// 		$("nav.chapters > .previous").show();
 			
 			
-			jQuery('#menu.toc').hide();
-			jQuery('#chapter-menu').hide();
-			/*jQuery('#menu.toc').fadeOut(function () {
-		        jQuery('#chapter-menu').toggle('slide', {
-		            direction: 'left'
-		        }, 200);
-			});*/
+	// 		$('#menu.toc').hide();
+	// 		$('#chapter-menu').hide();
+	// 		/*$('#menu.toc').fadeOut(function () {
+	// 	        $('#chapter-menu').toggle('slide', {
+	// 	            direction: 'left'
+	// 	        }, 200);
+	// 		});*/
 			
-			//jQuery('#chapter-menu').hide("slow");
-			//jQuery('#menu.toc').hide('slide', {direction: 'left'});
+	// 		//$('#chapter-menu').hide("slow");
+	// 		//$('#menu.toc').hide('slide', {direction: 'left'});
 			
-		}
+	// 	}
 		
-	});
+	// });
 	
 	//gives us the anchors of our current page
-	/*var subitems = jQuery.find('.content a.submenu');
+	/*var subitems = $.find('.content a.submenu');
 	
 	var currentPage = window.location.hash;
 	var currentNoHash = window.location.href.split('#')[0];
 	
 	var submenuID = '<ol>';
-	jQuery.each(subitems, function(key, value) {
-		newHash = jQuery(this).attr('id');
+	$.each(subitems, function(key, value) {
+		newHash = $(this).attr('id');
 		newLink = currentNoHash + newHash;
 		
 		//listStart = '<li><a href="' + newHash + '">' + 
@@ -74,45 +74,45 @@ jQuery(document).ready(function($) {
 	submenuID = submenuID + '</ol>';
 	
 	
-	jQuery('#currentSubmenu').html(subitems);*/
+	$('#currentSubmenu').html(subitems);*/
 	
 	
-	/*
-	vw = jQuery(window).width();
+	
+	vw = $(window).width();
 	if (vw >= 1024) {
 		var jPM = $.jPanelMenu({
 			closeOnContentClick: false,
 			openPosition: "22%",
 			beforeOpen: function() {
-				jQuery("nav.chapters > .previous").hide();
-				jQuery(".menu-trigger").css("left", "22%");
-				jQuery(".jPanelMenu-panel").css("width", "78%");
+				$("nav.chapters > .previous").hide();
+				$(".menu-trigger").css("left", "22%");
+				$(".jPanelMenu-panel").css("width", "78%");
 			},
 			beforeClose: function() {
-				jQuery("nav.chapters > .previous").show();
-				jQuery(".menu-trigger").css("left", "");
-				jQuery(".jPanelMenu-panel").css("width", "");
+				$("nav.chapters > .previous").show();
+				$(".menu-trigger").css("left", "");
+				$(".jPanelMenu-panel").css("width", "");
 			},
 		});
 	} else {
-		var jPM = jQuery.jPanelMenu({
+		var jPM = $.jPanelMenu({
 			beforeOpen: function() {
-				jQuery("nav.chapters > .previous").hide();
-				jQuery(".menu-trigger").css("left", 250);
+				$("nav.chapters > .previous").hide();
+				$(".menu-trigger").css("left", 250);
 			},
 			beforeClose: function() {
-				jQuery("nav.chapters > .previous").show();
-				jQuery(".menu-trigger").css("left", "");
+				$("nav.chapters > .previous").show();
+				$(".menu-trigger").css("left", "");
 			},
 		});
 	}
 	
 	jPM.on();
-	jQuery("#menu").remove();
-	*/
+	$("#menu").remove();
+	
 	
 	//get all h2 class=submenu, put into list to insert into drom chapter menu
-	var subitems = jQuery.find('.content h2.submenu');
+	var subitems = $.find('.content h2.submenu');
 	var submenuID = '';
 	var currentPage = window.location.hash;
 	var currentNoHash = window.location.href.split('#')[0];
@@ -120,9 +120,9 @@ jQuery(document).ready(function($) {
 	//iterate over each: get text, convert text to lowercase w slashes, insert id of prior to h2 tags, 
 	if (subitems.length > 0) { //if we HAVE submenu items
 		submenuMarkup = '<ol>';
-		jQuery.each(subitems, function() {
+		$.each(subitems, function() {
 			//get text
-			submenuID = jQuery(this).html();
+			submenuID = $(this).html();
 			
 			//title for sidemenu
 			submenuTitle = submenuID;
@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
 			submenuID = submenuID.toLowerCase().replace(/ /g, '-');
 			
 			//add id tags to h2 elements
-			jQuery(this).attr('id', submenuID);
+			$(this).attr('id', submenuID);
 			
 			//add list element to markup
 			submenuMarkup += '<li><a class="' + submenuID + '" href="' + currentNoHash + '#' + submenuID + '">' + submenuTitle + '</a></li>';
@@ -141,21 +141,21 @@ jQuery(document).ready(function($) {
 		
 		
 		//find href of chapter-menu that == current href
-		var subitems = jQuery.find('#chapter-menu ol li a');
+		var subitems = $.find('#jPanelMenu-menu ol li a');
 		var chapterHref = '';
-		jQuery.each(subitems, function() {
+		$.each(subitems, function() {
 			//get chapter href
-			chapterHref = jQuery(this).attr('href');
+			chapterHref = $(this).attr('href');
 			//compare
 			if (chapterHref == currentNoHash) {		
 				//add markup here
-				jQuery(this).parent().append(submenuMarkup);
+				$(this).parent().append(submenuMarkup);
 			}
 			
 			
 		});
 	}
-	//jQuery('#currentSubmenu').html(subitems);
+	//$('#currentSubmenu').html(subitems);
 	
 	
 });

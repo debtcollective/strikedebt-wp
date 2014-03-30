@@ -91,7 +91,7 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/icons.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom-live.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom.css">
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -107,9 +107,8 @@
 
 <header>
 	<div class="wrapper">
-		<!--<a href="" class="menu-trigger"><i class="icon-th-menu"></i>Menu</a>-->
+		<a class="menu-trigger"><i class="icon-menu-th"></i>Menu</a>
 
-		<div class="menu-trigger"><i class="icon-menu-th"></i>Menu</div>
 		<a href="/" id="project-of"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /> A Project of Strike Debt </a>
 
 		<h3><a href="http://strikedebt.org/drom">The Debt Resisters&rsquo; Operations Manual</a></h3>
@@ -117,7 +116,7 @@
 	
 </header>
 
-<div id="chapter-menu">
+<!-- <div id="chapter-menu"> -->
 <aside class="toc" id="menu">
 	
 	<?php 
@@ -161,6 +160,6 @@
 		
 	
 </aside>
-</div>
+<!-- </div> -->
 
 

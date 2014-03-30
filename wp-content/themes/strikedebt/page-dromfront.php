@@ -28,10 +28,6 @@ Template Name: DROM Front Page
 
 ?>
 
-
-<div id="TopWrapper" class="head-wrap">
-	<div class="wrapper">
-
 		<div class="intro">
 			<?php the_content(); ?>
 		</div>
@@ -44,7 +40,7 @@ Template Name: DROM Front Page
 			<a href="https://secure.pmpress.org/index.php?l=product_detail&p=563" target="_blank">Buy A Copy</a>
 		</figure>
 	</div>
-</div>
+</div></header>
 
 		
 <?php 

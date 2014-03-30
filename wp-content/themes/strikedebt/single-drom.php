@@ -100,10 +100,8 @@ $total_num_chapters = count( $chapter_id_array ); //0-indexed
 		<h1><?php if ($subtitle) {echo $subtitle;} ?></h1>
 		<!--<article <?php //post_class() ?> id="post-<?php //the_ID(); ?>">-->
 		
-		<article>
-			<div class="content">
+		<article class="content">
 		    <?php the_content(); ?>
-			</div>
 		</article>
 	
 	</section>

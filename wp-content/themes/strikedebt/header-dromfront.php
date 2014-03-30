@@ -91,7 +91,7 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/icons.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom-live.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/drom.css">
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
@@ -114,9 +114,6 @@
 		<a href="/"><img src="<?php bloginfo('template_directory'); ?>/_/drom_square.png" alt="Strike Debt!" id="title" /></a>
 
 		<h1>The Debt Resisters&rsquo; Operations Manual</h1>
-
-	</div>
-</div></header>
 
 
 
