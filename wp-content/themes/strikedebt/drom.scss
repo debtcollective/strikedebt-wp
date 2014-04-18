@@ -590,6 +590,11 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				color: $dark-grey;
 			}
 
+			p {
+				margin-bottom: 0;
+				text-indent: 2em;
+			}
+
 			ul, ol {
 				// list-style: square;
 				margin: 1.25em 0;
@@ -651,10 +656,22 @@ $rule: 			desaturate(lighten($mid-grey, 20%), 30%);
 				}
 			}
 
-			p {
-				margin-bottom: 0;
-				text-indent: 2em;
+			dl {
 
+				dt {
+					@extend %sans;
+					color: $magenta;
+					display: inline-block;
+				}
+
+				dd {
+					margin-bottom: 1.25em;
+				}
+			}
+
+			strong, b {
+				color: $magenta;
+				font-weight: normal;
 			}
 
 			aside {

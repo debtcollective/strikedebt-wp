@@ -2,7 +2,7 @@
   font-family: "calluna", serif;
   font-weight: 600; }
 
-.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article ol > li:before, .drom.chapter article aside {
+.drom header figure a, .drom.chapter nav.chapters#side a, .drom.chapter nav.chapters li a, .drom header p::first-letter, .drom.chapter article p:first-of-type::first-letter, .drom .menu-trigger, .drom .chapter-num, .drom #praise figure .attr, .drom.chapter header h3, .drom.chapter header #project-of, .drom.chapter nav.chapters, .drom.chapter h2, .drom.chapter .toc a span, .drom.chapter article h2, .drom.chapter article h3, .drom.chapter article h4, .drom.chapter article ol > li:before, .drom.chapter article dl dt, .drom.chapter article aside {
   font-family: "calluna-sans", sans-serif;
   font-weight: 600; }
 
@@ -351,6 +351,9 @@
         font-size: 1.25em;
         font-weight: 300;
         color: #313539; }
+      .drom.chapter article p {
+        margin-bottom: 0;
+        text-indent: 2em; }
       .drom.chapter article ul, .drom.chapter article ol {
         margin: 1.25em 0;
         margin-left: 2em; }
@@ -388,9 +391,14 @@
         .drom.chapter article ol ul {
           margin-top: 0;
           margin-bottom: 0; }
-      .drom.chapter article p {
-        margin-bottom: 0;
-        text-indent: 2em; }
+      .drom.chapter article dl dt {
+        color: #9e004f;
+        display: inline-block; }
+      .drom.chapter article dl dd {
+        margin-bottom: 1.25em; }
+      .drom.chapter article strong, .drom.chapter article b {
+        color: #9e004f;
+        font-weight: normal; }
       .drom.chapter article aside {
         float: none;
         width: auto;
