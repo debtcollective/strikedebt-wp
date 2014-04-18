@@ -52,7 +52,7 @@
       </aside>
       
       <h3 id="event">Visit a Strike Debt Event</h3>
-      <?php echo do_shortcode( '[google-calendar-events id="1, 2" type="list-grouped" title="Strike Debt Events" max="3"]' ); ?>
+      <?php echo do_shortcode( '[google-calendar-events id="1, 2" type="list-grouped" title="Strike Debt Events" max="6"]' ); ?>
       
     </div>
 	</section>
