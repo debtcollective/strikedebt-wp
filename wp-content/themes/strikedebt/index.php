@@ -30,12 +30,23 @@
       <h2>Get Involved</h2>
       
       <aside>
-        <figure>
+        <!--<figure>
            <h3><a href="https://www.wepay.com/donations/636871470">Donate to Strike Debt</a></h3>
            
            <div id="wepay" class="clearfix"><a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_50a13ffb6e40c" href="https://www.wepay.com/donations/636871470">Donate</a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 636871470,widget_type: "donation_campaign",anchor_id: "wepay_widget_anchor_50a13ffb6e40c",widget_options: {donor_chooses: true,allow_cover_fee: true,enable_recurring: true,allow_anonymous: true,button_text: "Donate"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script></div>
            
+        
+           
            <p><em>Powered by </em><a href="http://www.wepay.com/donations/strikedebt">We Pay</a></p>
+         </figure>-->
+         
+         <figure>
+         
+         	<h3><a href="https://rally.org/strikedebt">Donate to Strike Debt</a></h3>
+         <!-- Rally.org donation meter BEGIN -->
+			<iframe height="100" scrolling="no" src="https://rally.org/causes/1G6ksHkiyjM/donation_meter?no_recent_donor=1" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; overflow-x: hidden; overflow-y: hidden;" width="100%"></iframe>
+<!-- Rally.org donation meter END -->
+         
          </figure>
          
          <figure class="clearfix">
@@ -52,7 +63,7 @@
       </aside>
       
       <h3 id="event">Visit a Strike Debt Event</h3>
-      <?php echo do_shortcode( '[google-calendar-events id="1, 2" type="list-grouped" title="Strike Debt Events" max="3"]' ); ?>
+      <?php echo do_shortcode( '[google-calendar-events id="1, 2" type="list-grouped" title="Strike Debt Events" max="6"]' ); ?>
       
     </div>
 	</section>
