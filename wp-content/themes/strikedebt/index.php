@@ -30,15 +30,6 @@
       <h2>Get Involved</h2>
       
       <aside>
-        <!--<figure>
-           <h3><a href="https://www.wepay.com/donations/636871470">Donate to Strike Debt</a></h3>
-           
-           <div id="wepay" class="clearfix"><a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_50a13ffb6e40c" href="https://www.wepay.com/donations/636871470">Donate</a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 636871470,widget_type: "donation_campaign",anchor_id: "wepay_widget_anchor_50a13ffb6e40c",widget_options: {donor_chooses: true,allow_cover_fee: true,enable_recurring: true,allow_anonymous: true,button_text: "Donate"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script></div>
-           
-        
-           
-           <p><em>Powered by </em><a href="http://www.wepay.com/donations/strikedebt">We Pay</a></p>
-         </figure>-->
          
          <figure>
          
