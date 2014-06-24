@@ -1049,6 +1049,9 @@ a.post-edit-link:hover {
 /* 18 Mar 2014, DROM Front things (mel) */
 
 
+/* Blog archive */
+
+
 
 
 
@@ -1262,6 +1265,18 @@ a.post-edit-link:hover {
     #about, .post {
       padding-left: 14em;
       padding-right: 0;
+    }
+
+
+
+    .page-template-archives-php article li {
+        width: 47%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5%;
+    }
+    .page-template-archives-php article li:nth-child(odd) {
+        margin-left: 0;
     }
 }
 

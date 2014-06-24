@@ -36,4 +36,6 @@
 	
 	<?php endif; ?>
 
+    <a href="/blog-archive">See all posts &rarr;</a>
+
 </aside>
