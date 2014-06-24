@@ -353,6 +353,20 @@ function sd_save_praise_meta_boxes( $post_id ) {
 add_action( 'save_post', 'sd_save_praise_meta_boxes' );
 
 
+// remove [...]
+
+function new_excerpt_more( $more ) {
+	return ' &hellip;';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+// for excerpts on the archive page
+
+// function sm_excerpt( $length ) {
+// 	return 20;
+// }
+// add_filter( 'excerpt_length', 'sm_excerpt', 999 );
 
 
 ?>

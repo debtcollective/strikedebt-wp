@@ -11,7 +11,7 @@
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
-		  <p><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F jS, Y') ?></time></p>
+		  <p><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F j, Y') ?></time></p>
 			
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			

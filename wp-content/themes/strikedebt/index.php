@@ -103,7 +103,7 @@
 
 	<section class="clearfix" id="blog">
     <div class="wrapper clearfix" style="margin-top: 0;">
-    <h2>Blog</h2>
+    <h2><a href="/blog-archive">Blog</a></h2>
     
   	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   
