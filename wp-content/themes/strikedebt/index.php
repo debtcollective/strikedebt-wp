@@ -35,8 +35,8 @@
          
          	<h3><a href="https://rally.org/strikedebt">Donate to Strike Debt</a></h3>
          <!-- Rally.org donation meter BEGIN -->
-			<iframe height="100" scrolling="no" src="https://rally.org/causes/1G6ksHkiyjM/donation_meter?no_recent_donor=1" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; overflow-x: hidden; overflow-y: hidden;" width="100%"></iframe>
-<!-- Rally.org donation meter END -->
+      			<iframe height="100" scrolling="no" src="https://rally.org/causes/1G6ksHkiyjM/donation_meter?no_recent_donor=1" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; overflow-x: hidden; overflow-y: hidden;" width="100%"></iframe>
+        <!-- Rally.org donation meter END -->
          
          </figure>
          
@@ -54,7 +54,7 @@
       </aside>
       
       <h3 id="event">Visit a Strike Debt Event</h3>
-      <?php echo do_shortcode( '[google-calendar-events id="1, 2" type="list-grouped" title="Strike Debt Events" max="6"]' ); ?>
+      <?php echo do_shortcode( '[google-calendar-events type="list-grouped" title="Strike Debt Events" max="6"]' ); ?>
       
     </div>
 	</section>
